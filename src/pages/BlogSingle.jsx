@@ -1,7 +1,8 @@
 "use client";
 
 import React from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
 import PageTitle from '../components/common/PageTitle';
@@ -10,8 +11,6 @@ import { RESOURCE_DATA } from '../data/resourceData';
 
 function BlogSingle() {
   const params = useParams();
-  const router = useRouter();
-
   const blogSlug = params?.blogSlug;
 
   // Find the blog item from RESOURCE_DATA
@@ -19,8 +18,7 @@ function BlogSingle() {
   const blogItem = blogResource?.gridItems.find(item => item.slug === blogSlug);
 
   if (!blogItem) {
-    router.replace('/404');
-    return null;
+    notFound();
   }
 
   const breadcrumbs = [
