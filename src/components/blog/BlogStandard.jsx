@@ -1,7 +1,7 @@
 import React from 'react';
-import PageTitle from '../components/common/PageTitle';
-import BlogItem from '../components/blog/BlogItem';
-import BlogSidebar from '../components/blog/BlogSidebar';
+import PageTitle from '../common/PageTitle';
+import BlogItem from './BlogItem';
+import BlogSidebar from './BlogSidebar';
 import Link from "next/link";
 
 function BlogStandard() {
@@ -39,10 +39,10 @@ function BlogStandard() {
                 />
                 <div className="wd-full effectFade fadeUp no-div">
                   <ul className="wg-pagination">
-                    <li><Link to="#" className="pagination-item active">1</Link></li>
-                    <li><Link to="#" className="pagination-item">2</Link></li>
-                    <li><Link to="#" className="pagination-item">...</Link></li>
-                    <li><Link to="#" className="pagination-item"><i className="icon icon-angle-right-solid"></i></Link></li>
+                    <li><Link href="#" className="pagination-item active">1</Link></li>
+                    <li><Link href="#" className="pagination-item">2</Link></li>
+                    <li><Link href="#" className="pagination-item">...</Link></li>
+                    <li><Link href="#" className="pagination-item"><i className="icon icon-angle-right-solid"></i></Link></li>
                   </ul>
                 </div>
               </div>
