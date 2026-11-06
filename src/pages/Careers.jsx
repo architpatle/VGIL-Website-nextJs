@@ -1,6 +1,8 @@
+"use client";
+
 import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Footer from '../components/Footer';
 import careersBg from '../assets/careers-bg-img/Careers@2x.png';
 
@@ -20,37 +22,54 @@ import team17 from '../assets/group-img-vgil-team/vgiplteam-17.jpg';
 
 // Red and white theme
 const Careers = () => {
-  const { hash } = useLocation();
+  const pathname = usePathname();
 
   // Scroll to hash on load
   useEffect(() => {
-    if (hash) {
-      const id = hash.replace('#', '');
-      const element = document.getElementById(id);
-      if (element) {
-        // Offset for sticky navbar
-        const y = element.getBoundingClientRect().top + window.scrollY - 100;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+
+      if (hash) {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+
+        if (element) {
+          const y =
+            element.getBoundingClientRect().top +
+            window.scrollY -
+            100;
+
+          window.scrollTo({
+            top: y,
+            behavior: 'smooth',
+          });
+        }
+      } else {
+        window.scrollTo(0, 0);
       }
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [hash]);
+    };
+
+    scrollToHash();
+
+    window.addEventListener('hashchange', scrollToHash);
+
+    return () => {
+      window.removeEventListener('hashchange', scrollToHash);
+    };
+  }, [pathname]);
 
   return (
     <>
-      {/* <Navbar /> */}
-      
       {/* Hero Section */}
-      <section className="careers-hero" style={{ 
-        paddingTop: '150px', 
-        paddingBottom: '80px', 
-        backgroundImage: `url(${careersBg})`,
+      <section className="careers-hero" style={{
+        paddingTop: '150px',
+        paddingBottom: '80px',
+        backgroundImage: `url(${careersBg.src})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        color: '#ffffff', 
-        textAlign: 'center' 
+        color: '#ffffff',
+        textAlign: 'center'
       }}>
         <div className="container">
           <h1 style={{ fontSize: '4rem', fontWeight: '800', marginBottom: '20px', color: '#ffffff' }}>Build Your Future With Us</h1>
@@ -73,7 +92,7 @@ const Careers = () => {
               <p style={{ fontSize: '1.1rem', color: '#555', marginBottom: '30px', lineHeight: '1.6' }}>
                 Whether you're developing cutting-edge AI or transforming banking workflows, you'll find the support and resources you need to succeed.
               </p>
-              
+
               <div style={{ display: 'flex', gap: '15px', marginTop: '20px' }}>
                 <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', backgroundColor: '#e10600', color: '#fff', borderRadius: '50%', textDecoration: 'none' }}>
                   <i className="icon icon-linkedin-in"></i>
@@ -83,7 +102,7 @@ const Careers = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="col-lg-6">
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600" alt="Team collaborating" style={{ width: '100%', height: '300px', objectFit: 'cover', borderRadius: '16px', gridRow: 'span 2' }} />
@@ -103,7 +122,7 @@ const Careers = () => {
           <p style={{ fontSize: '1.1rem', color: '#555', maxWidth: '800px', margin: '0 auto 50px auto', lineHeight: '1.6' }}>
             We are a diverse group of engineers, designers, and strategists united by a shared passion for technology and innovation.
           </p>
-          
+
           <div className="row">
             {[
               { img: team6, name: 'Team Collaboration', role: 'Working together to build seamless solutions.' },
@@ -121,7 +140,7 @@ const Careers = () => {
             ].map((person, idx) => (
               <div key={idx} className="col-md-4 mb-4">
                 <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', backgroundColor: '#fff' }}>
-                  <img src={person.img} alt={person.name} style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
+                  <img src={person.img.src} alt={person.name} style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
                   <div style={{ padding: '25px' }}>
                     <h3 style={{ fontSize: '1.4rem', fontWeight: '700', marginBottom: '5px', color: '#1a1a1a' }}>{person.name}</h3>
                     <p style={{ color: '#e10600', margin: '0', fontWeight: '600' }}>{person.role}</p>
@@ -143,7 +162,7 @@ const Careers = () => {
               <p style={{ fontSize: '1.1rem', color: '#555', marginBottom: '20px', lineHeight: '1.6' }}>
                 We offer a transparent and accelerated career path for our employees. From junior developers to enterprise architects, you'll have the mentorship and resources to level up.
               </p>
-              
+
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 30px 0' }}>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
                   <div style={{ width: '30px', height: '30px', borderRadius: '50%', backgroundColor: '#ffeeee', color: '#e10600', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><i className="icon icon-check"></i></div>
@@ -158,13 +177,13 @@ const Careers = () => {
                   <span style={{ fontSize: '1.1rem', fontWeight: '500', color: '#1a1a1a' }}>Flexible work-from-anywhere policies</span>
                 </li>
               </ul>
-              
+
               <div style={{ backgroundColor: '#fff', border: '1px solid #eaeaea', borderRadius: '16px', padding: '30px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', boxShadow: '0 10px 30px rgba(0,0,0,0.03)' }}>
                 <div>
                   <h3 style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1a1a1a', margin: '0 0 5px 0' }}>42+</h3>
                   <p style={{ margin: 0, color: '#666', fontSize: '0.9rem' }}>Open Positions</p>
                 </div>
-                <a href="hr@vginfotech.ai " style={{ backgroundColor: '#e10600', color: '#fff', padding: '12px 25px', borderRadius: '100px', textDecoration: 'none', fontWeight: '600' }}>Apply Now</a>
+                <a href="mailto:hr@vginfotech.ai" style={{ backgroundColor: '#e10600', color: '#fff', padding: '12px 25px', borderRadius: '100px', textDecoration: 'none', fontWeight: '600' }}>Apply Now</a>
               </div>
             </div>
             <div className="col-lg-6 order-lg-1">
@@ -173,13 +192,13 @@ const Careers = () => {
           </div>
         </div>
       </section>
-      
+
       {/* 4. CTA / Let's Connect */}
       <section id="lets-connect" style={{ padding: '80px 0', backgroundColor: '#e10600', color: '#fff', textAlign: 'center' }}>
         <div className="container">
           <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '20px' }}>Ready to shape the future?</h2>
           <p style={{ fontSize: '1.2rem', marginBottom: '40px', opacity: 0.9 }}>Connect with our team to discover how you fit into Virtual Galaxy.</p>
-          <Link to="/contact" style={{ display: 'inline-block', backgroundColor: '#fff', color: '#e10600', padding: '15px 40px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '1.1rem', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>Let's Connect</Link>
+          <Link href="/contact" style={{ display: 'inline-block', backgroundColor: '#fff', color: '#e10600', padding: '15px 40px', borderRadius: '100px', textDecoration: 'none', fontWeight: '700', fontSize: '1.1rem', boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }}>Let's Connect</Link>
         </div>
       </section>
 

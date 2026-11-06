@@ -1,18 +1,26 @@
+"use client";
+
 import React from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, useRouter } from 'next/navigation';
+import Link from 'next/link';
+
 import PageTitle from '../components/common/PageTitle';
 import BlogSidebar from '../components/blog/BlogSidebar';
 import { RESOURCE_DATA } from '../data/resourceData';
 
 function BlogSingle() {
-  const { blogSlug } = useParams();
-  
+  const params = useParams();
+  const router = useRouter();
+
+  const blogSlug = params.blogSlug;
+
   // Find the blog item from RESOURCE_DATA
   const blogResource = RESOURCE_DATA.find(r => r.slug === 'blog');
   const blogItem = blogResource?.gridItems.find(item => item.slug === blogSlug);
 
   if (!blogItem) {
-    return <Navigate to="/404" />;
+    router.replace('/404');
+    return null;
   }
 
   const breadcrumbs = [
@@ -31,10 +39,10 @@ function BlogSingle() {
             <div className="col-lg-7">
               <div className="blog-single-wrap">
                 {/* Header Image */}
-                <div className="image effectFade fadeZoom mb-40" style={{ 
-                  border: '2px solid #000', 
-                  borderRadius: '20px', 
-                  overflow: 'hidden', 
+                <div className="image effectFade fadeZoom mb-40" style={{
+                  border: '2px solid #000',
+                  borderRadius: '20px',
+                  overflow: 'hidden',
                   boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
                   background: '#fff',
                   display: 'flex',
@@ -42,19 +50,19 @@ function BlogSingle() {
                   justifyContent: 'center',
                   maxHeight: '400px'
                 }}>
-                  <img 
-                    loading="lazy" 
-                    src={blogItem.image} 
-                    alt={blogItem.title} 
-                    style={{ 
-                      maxWidth: '100%', 
-                      maxHeight: '100%', 
+                  <img
+                    loading="lazy"
+                    src={blogItem.image}
+                    alt={blogItem.title}
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
                       objectFit: 'contain',
                       padding: '20px'
-                    }} 
+                    }}
                   />
                 </div>
-                
+
                 {/* Blog Content */}
                 <div className="blog-content-text">
                   <h2 className="fw-bold mb-30" style={{ color: '#ff4d00' }}>{blogItem.title}</h2>
@@ -70,9 +78,9 @@ function BlogSingle() {
                   <div className="tags-links">
                     <h6 className="text-body-1">Tags:</h6>
                     <div className="list-tags">
-                      <Link to="#" className="tags-item fw-semibold">Technology</Link>
-                      <Link to="#" className="tags-item fw-semibold">Banking</Link>
-                      <Link to="#" className="tags-item fw-semibold">Innovation</Link>
+                      <Link href="#" className="tags-item fw-semibold">Technology</Link>
+                      <Link href="#" className="tags-item fw-semibold">Banking</Link>
+                      <Link href="#" className="tags-item fw-semibold">Innovation</Link>
                     </div>
                   </div>
                   <div className="d-flex align-items-center gap-12">
