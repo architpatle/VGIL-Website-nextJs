@@ -1,0 +1,222 @@
+.ds-strategy-section {
+  /* padding: 100px 0; */
+  /* background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%); */
+  position: relative;
+  overflow: hidden;
+}
+
+.ds-strategy-bg-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 51, 0, 0.15), transparent);
+  width: 100%;
+  left: 0;
+}
+
+.ds-strategy-bg-line:nth-child(1) { top: 25%; }
+.ds-strategy-bg-line:nth-child(2) { top: 50%; }
+.ds-strategy-bg-line:nth-child(3) { top: 75%; }
+
+.ds-strategy-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ds-strategy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255, 51, 0, 0.08);
+  border: 1px solid rgba(255, 51, 0, 0.2);
+  border-radius: 50px;
+  color: #ff3300;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.ds-strategy-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.ds-strategy-title .text-red {
+  color: #ff3300;
+}
+
+.ds-strategy-subtitle {
+  font-size: 1.1rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Stats Cards */
+.ds-strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.ds-strategy-card {
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 24px;
+  padding: 40px 32px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.ds-strategy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff3300, #ff7733);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.ds-strategy-card:hover::before {
+  transform: scaleX(1);
+}
+
+.ds-strategy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(255, 51, 0, 0.1);
+  border-color: rgba(255, 51, 0, 0.2);
+}
+
+.ds-strategy-card-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 51, 0, 0.03) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.ds-strategy-card:hover .ds-strategy-card-bg {
+  opacity: 1;
+}
+
+.ds-strategy-icon-ring {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 51, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.ds-strategy-icon-ring::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 51, 0, 0.15);
+  animation: ds-ring-spin 12s linear infinite;
+}
+
+@keyframes ds-ring-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ds-strategy-card:hover .ds-strategy-icon-ring {
+  background: rgba(255, 51, 0, 0.12);
+  transform: scale(1.1);
+}
+
+.ds-strategy-label {
+  font-size: 0.85rem;
+  color: #ff3300;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.ds-strategy-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.ds-strategy-desc {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Counter Animation */
+.ds-strategy-counter {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2px;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #ff3300;
+  margin-bottom: 8px;
+}
+
+.ds-strategy-counter-suffix {
+  font-size: 1.4rem;
+  color: #ff5533;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .ds-strategy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ds-strategy-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .ds-strategy-section {
+    /* padding: 60px 0; */
+  }
+  .ds-strategy-grid {
+    grid-template-columns: 1fr;
+  }
+  .ds-strategy-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ds-strategy-icon-ring{
+    height: 40px;
+    width: 40px;
+  }
+  .ds-strategy-icon-ring svg{
+    height: 20px;
+    width: 20px;
+  }
+  .ds-strategy-card{
+    padding: 24px;
+  }
+  .ds-strategy-value{
+    font-size: 24px;
+  }
+
+}

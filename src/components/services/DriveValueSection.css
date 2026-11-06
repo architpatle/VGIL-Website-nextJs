@@ -1,0 +1,124 @@
+/* Drive Value Section Styles */
+.section-heading-responsive {
+  font-size: 3.5rem;
+}
+
+.data-flow-path {
+  stroke-dasharray: 10, 20;
+  animation: dataFlow 1.5s linear infinite;
+  opacity: 0.6;
+}
+
+.data-flow-path-fast {
+  stroke-dasharray: 5, 15;
+  animation: dataFlow 1s linear infinite;
+  opacity: 0.8;
+}
+
+.data-flow-path-slow {
+  stroke-dasharray: 15, 30;
+  animation: dataFlow 2.5s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes dataFlow {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+.value-node-glow {
+  animation: pulse-red-glow 2s infinite alternate;
+}
+
+@keyframes pulse-red-glow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.4));
+    transform: scale(1);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 20px rgba(220, 38, 38, 0.8));
+    transform: scale(1.05);
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+
+.section-drive-value-right-metrics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+
+}
+
+@media (max-width: 900px) {
+  .section-drive-value {
+    /* padding: 2.5rem 0; */
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading-responsive {
+    font-size: 2.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-drive-value-right {
+    margin-top: 0 !important;
+  }
+
+  .section-drive-value-right-card {
+    padding: 16px !important;
+  }
+
+  .section-drive-value-right-card-para {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .section-drive-value-right-metrics {
+    margin: 12px 0 0 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+    place-items: center !important;
+
+  }
+
+  .section-drive-value-right-metrics-items {
+    width: 100% !important;
+  }
+
+  .section-heading-responsive {
+    font-size: 24px !important;
+    margin-bottom: 12px !important;
+  }
+}

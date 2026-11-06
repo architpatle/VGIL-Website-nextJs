@@ -1,0 +1,724 @@
+/* =========================================================
+   JOB APPLICATION FORM
+========================================================= */
+
+.job-application-wrapper {
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.job-application-form {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+
+  padding: 28px;
+
+  background: #ffffff;
+
+  border-radius: 40px;
+
+  box-shadow:
+    0px 30px 60px rgba(0, 0, 0, 0.04),
+    0px 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.job-application-form h3 {
+  margin: 0 0 24px;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  color: #09090B;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+
+.job-application-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 16px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.job-application-form fieldset label {
+  margin-bottom: 6px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #09090B;
+}
+
+
+/* =========================================================
+   NORMAL INPUTS
+========================================================= */
+
+.job-application-form input,
+.job-application-form textarea {
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1.5px solid #E4E4E7;
+
+  border-radius: 0;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  color: #09090B;
+
+  outline: none;
+
+  transition: border-color 0.3s ease;
+
+  box-sizing: border-box;
+}
+
+.job-application-form input:focus,
+.job-application-form textarea:focus {
+  border-bottom-color: #FD3A25;
+}
+
+.job-application-form input::placeholder,
+.job-application-form textarea::placeholder {
+  color: #A1A1AA;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.job-application-form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+.job-phone-input-wrapper {
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   COUNTRY DROPDOWN
+========================================================= */
+
+.job-country-dropdown {
+  position: relative;
+
+  width: 120px;
+  min-width: 120px;
+
+  flex: 0 0 120px;
+}
+
+
+/* Trigger */
+
+.job-country-dropdown-trigger {
+  width: 100%;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1.5px solid #E4E4E7;
+
+  background: transparent;
+
+  color: #09090B;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition: border-color 0.3s ease;
+}
+
+.job-country-dropdown-trigger:hover {
+  border-bottom-color: #D4D4D8;
+}
+
+.job-country-dropdown.is-open
+.job-country-dropdown-trigger {
+  border-bottom-color: #FD3A25;
+}
+
+
+/* Selected country */
+
+.job-country-selected-content {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.job-country-selected-code {
+  white-space: nowrap;
+}
+
+
+/* Flag */
+
+.job-country-flag {
+  width: 22px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.job-country-flag svg {
+  width: 22px;
+  height: auto;
+
+  display: block;
+}
+
+
+/* Arrow */
+
+.job-country-dropdown-arrow {
+  flex-shrink: 0;
+
+  color: #52525B;
+
+  transition: transform 0.25s ease;
+}
+
+.job-country-dropdown.is-open
+.job-country-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* =========================================================
+   COUNTRY DROPDOWN MENU
+========================================================= */
+
+.job-country-dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  left: 0;
+
+  width: 280px;
+
+  z-index: 1000;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E4E4E7;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.10),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+
+  overflow: hidden;
+}
+
+.job-country-dropdown-list {
+  max-height: 240px;
+
+  overflow-y: auto;
+
+  padding: 5px;
+}
+
+
+/* Scrollbar */
+
+.job-country-dropdown-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.job-country-dropdown-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.job-country-dropdown-list::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   COUNTRY OPTIONS
+========================================================= */
+
+.job-country-dropdown-option {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 9px 10px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #09090B;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.job-country-dropdown-option:hover {
+  background-color: #F4F4F5;
+}
+
+.job-country-dropdown-option.selected {
+  background-color: rgba(253, 58, 37, 0.07);
+  color: #FD3A25;
+}
+
+
+/* Option flag */
+
+.job-country-option-flag {
+  width: 22px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.job-country-option-flag svg {
+  width: 22px;
+  height: auto;
+
+  display: block;
+}
+
+
+/* Option name */
+
+.job-country-option-name {
+  flex: 1;
+
+  min-width: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* Option calling code */
+
+.job-country-option-code {
+  margin-left: auto;
+
+  color: #71717A;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PHONE NUMBER
+========================================================= */
+
+.job-phone-number-input {
+  flex: 1;
+
+  min-width: 0;
+
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none !important;
+  border-bottom: 1.5px solid #E4E4E7 !important;
+
+  border-radius: 0 !important;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  color: #09090B;
+
+  outline: none;
+
+  transition: border-color 0.3s ease;
+}
+
+.job-phone-number-input:focus {
+  border-bottom-color: #FD3A25 !important;
+}
+
+.job-phone-number-input::placeholder {
+  color: #A1A1AA;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   RESUME / ATTACHMENT
+========================================================= */
+
+.resume-fieldset {
+  margin-top: 20px !important;
+}
+
+
+/* Hide actual browser file input */
+
+.job-file-input {
+  display: none !important;
+}
+
+
+/* Clickable attachment */
+
+.job-attachment {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  max-width: 100%;
+
+  margin-bottom: 8px;
+
+  color: #09090B;
+
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.job-attachment:hover {
+  color: #FD3A25;
+}
+
+.job-attachment-icon {
+  flex-shrink: 0;
+
+  color: currentColor;
+
+  transform: rotate(45deg);
+}
+
+.job-attachment-text {
+  max-width: 500px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.job-attachment.has-file {
+  color: #FD3A25;
+}
+
+
+/* Resume information */
+
+.resume-info {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  color: #A1A1AA;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.job-submit-wrapper {
+  display: flex;
+
+  margin-top: 22px;
+}
+
+.job-application-submit {
+  border: none;
+
+  background: #FD3A25;
+
+  color: #FFFFFF;
+
+  padding: 12px 24px;
+
+  border-radius: 30px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.job-application-submit:hover {
+  background: #e72f1d;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.application-success {
+  text-align: center;
+
+  padding: 40px 20px;
+}
+
+.success-icon {
+  width: 52px;
+  height: 52px;
+
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+
+  background: #FD3A25;
+
+  color: #FFFFFF;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.application-success h4 {
+  margin: 0 0 10px;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  color: #09090B;
+}
+
+.application-success p {
+  max-width: 480px;
+
+  margin: 0 auto;
+
+  color: #71717A;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 767px) {
+
+  .job-application-wrapper {
+    margin-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .job-application-form {
+    padding: 24px 20px;
+
+    border-radius: 25px;
+  }
+
+  .job-application-form h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .job-phone-input-wrapper {
+    gap: 10px;
+  }
+
+  .job-country-dropdown {
+    width: 105px;
+    min-width: 105px;
+
+    flex: 0 0 105px;
+  }
+
+  .job-country-dropdown-trigger {
+    height: 39px;
+
+    font-size: 14px;
+  }
+
+  .job-phone-number-input {
+    font-size: 14px;
+    padding: 7px 0;
+  }
+
+  .job-country-dropdown-menu {
+    width: 260px;
+
+    top: calc(100% + 6px);
+  }
+
+  .job-country-dropdown-list {
+    max-height: 220px;
+  }
+
+  .job-country-dropdown-option {
+    padding: 8px;
+
+    font-size: 13px;
+  }
+
+  .job-attachment-text {
+    max-width: 70vw;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .job-application-form {
+    padding: 20px 16px;
+
+    border-radius: 20px;
+  }
+
+  .job-application-form h3 {
+    font-size: 20px;
+  }
+
+  .job-phone-input-wrapper {
+    gap: 8px;
+  }
+
+  .job-country-dropdown {
+    width: 88px;
+    min-width: 88px;
+
+    flex: 0 0 88px;
+  }
+
+  .job-country-selected-code {
+    font-size: 13px;
+  }
+
+  .job-country-selected-content {
+    gap: 5px;
+  }
+
+  .job-country-flag,
+  .job-country-option-flag {
+    width: 20px;
+  }
+
+  .job-country-flag svg,
+  .job-country-option-flag svg {
+    width: 20px;
+  }
+
+  .job-country-dropdown-menu {
+    width: 250px;
+  }
+
+  .resume-info {
+    font-size: 9px;
+  }
+}
+
+.job-submit-wrapper {
+  margin-top: 24px;
+}
+
+.job-application-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.job-submit-error {
+  margin-top: 14px;
+  color: #dc3545;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}

@@ -1,0 +1,245 @@
+.ds-explore-section {
+  /* padding: 100px 0; */
+  /* background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%); */
+  position: relative;
+  overflow: hidden;
+}
+
+.ds-explore-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 51, 0, 0.15), transparent);
+}
+
+.ds-explore-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ds-explore-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255, 51, 0, 0.08);
+  border: 1px solid rgba(255, 51, 0, 0.2);
+  border-radius: 50px;
+  color: #ff3300;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.ds-explore-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.ds-explore-title .text-red {
+  color: #ff3300;
+}
+
+.ds-explore-subtitle {
+  font-size: 1.05rem;
+  color: #6b7280;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Service Detail Cards */
+.ds-explore-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #f3f4f6;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.ds-explore-card:hover {
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 51, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.ds-explore-card-inner {
+  display: flex;
+  align-items: stretch;
+}
+
+.ds-explore-card-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.ds-explore-card-visual {
+  width: 380px;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ds-explore-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.ds-explore-card:hover .ds-explore-card-visual img {
+  transform: scale(1.08);
+}
+
+.ds-explore-card-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 51, 0, 0.15) 0%, transparent 70%);
+  z-index: 1;
+}
+
+.ds-explore-card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #ff3300, #ff5533);
+  border-radius: 12px;
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.ds-explore-card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.ds-explore-card-desc {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+/* Feature List */
+.ds-explore-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ds-explore-feature-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255, 51, 0, 0.06);
+  border: 1px solid rgba(255, 51, 0, 0.12);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: #374151;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.ds-explore-feature-tag:hover {
+  background: rgba(255, 51, 0, 0.12);
+  border-color: rgba(255, 51, 0, 0.3);
+  color: #ff3300;
+}
+
+.ds-explore-feature-dot {
+  width: 6px;
+  height: 6px;
+  background: #ff3300;
+  border-radius: 50%;
+}
+
+/* Alternating layout */
+.ds-explore-card.ds-card-reverse .ds-explore-card-inner {
+  flex-direction: row-reverse;
+}
+
+/* First Card - Web Design - has key features */
+.ds-explore-key-features {
+  margin-top: 20px;
+}
+
+.ds-explore-key-features h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.ds-explore-key-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.ds-explore-key-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.ds-explore-check {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 51, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .ds-explore-card-inner {
+    flex-direction: column !important;
+  }
+  .ds-explore-card-visual {
+    width: 100%;
+    height: 250px;
+  }
+  .ds-explore-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .ds-explore-section {
+    /* padding: 60px 0; */
+  }
+  .ds-explore-card-content {
+    padding: 24px;
+  }
+  .ds-explore-title {
+    font-size: 1.8rem;
+  }
+  .ds-explore-key-features ul {
+    grid-template-columns: 1fr;
+  }
+}

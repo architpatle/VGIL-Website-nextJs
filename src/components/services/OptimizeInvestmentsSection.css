@@ -1,0 +1,615 @@
+.optimize-investments-section {
+  position: relative;
+  /* background-color: #fafcff; */
+  /* padding: 90px 0; */
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  z-index: 1;
+}
+
+/* Background Animations */
+.oi-bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.oi-gradient-mesh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(255, 77, 0, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(220, 38, 38, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(255, 77, 0, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(220, 38, 38, 0.03) 0px, transparent 50%);
+  animation: meshFlow 15s ease-in-out infinite alternate;
+}
+
+@keyframes meshFlow {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  100% {
+    transform: scale(1.1) rotate(2deg);
+  }
+}
+
+.oi-dotted-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(255, 77, 0, 0.15) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 70%);
+  opacity: 0.5;
+}
+
+/* Header */
+.oi-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.oi-highlight {
+  background: linear-gradient(135deg, #ff4d00, #dc2626);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+/* .oi-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff4d00, transparent);
+  animation: shimmerUnderline 3s infinite linear;
+} */
+
+@keyframes shimmerUnderline {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.oi-subtitle {
+  font-size: 18px;
+  color: #64748b;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+/* Tabs */
+.oi-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.oi-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  position: relative;
+  overflow: hidden;
+  color: #475569;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.oi-tab::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: linear-gradient(135deg, #ff4d00, #dc2626);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease, opacity 0.4s ease;
+  opacity: 0;
+  z-index: 0;
+}
+
+.oi-tab-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.oi-tab-icon-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oi-tab-icon-ring {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  transform: rotate(-90deg);
+}
+
+.oi-tab-icon-ring circle {
+  fill: none;
+  stroke: rgba(255, 77, 0, 0.8);
+  stroke-width: 2;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.oi-tab:hover,
+.oi-tab.active {
+  transform: translateY(-4px);
+  border-color: rgba(255, 77, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(255, 77, 0, 0.15), 0 0 15px rgba(255, 77, 0, 0.1);
+  color: #fff;
+}
+
+.oi-tab:hover::before,
+.oi-tab.active::before {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+}
+
+.oi-tab:hover .oi-tab-icon-ring circle,
+.oi-tab.active .oi-tab-icon-ring circle {
+  stroke-dashoffset: 0;
+  stroke: rgba(255, 255, 255, 0.9);
+}
+
+.oi-tab:hover .oi-tab-icon-wrapper svg,
+.oi-tab.active .oi-tab-icon-wrapper svg {
+  transform: scale(1.1);
+}
+
+/* Main Content Card */
+.oi-main-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 32px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.04), 0 0 40px rgba(255, 77, 0, 0.03);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  min-height: 400px;
+}
+
+.oi-main-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff4d00, #dc2626);
+  opacity: 0.8;
+}
+
+.oi-card-left {
+  flex: 0 0 40%;
+  background: linear-gradient(135deg, rgba(255, 240, 235, 0.5), rgba(255, 255, 255, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-right: 1px solid rgba(226, 232, 240, 0.6);
+  overflow: hidden;
+}
+
+.oi-orb-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.oi-orb-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 77, 0, 0.2) 0%, transparent 70%);
+  animation: orbPulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes orbPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+.oi-orb-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgba(255, 77, 0, 0.3);
+  border-radius: 50%;
+  animation: rotateRing 20s linear infinite;
+}
+
+@keyframes rotateRing {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.oi-orb-icon {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(255, 77, 0, 0.15);
+}
+
+.oi-card-right {
+  flex: 1;
+  padding: 24px;
+}
+
+.oi-content-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.oi-content-desc {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 0px;
+}
+
+/* Features Box */
+.oi-features-box {
+  /* background: rgba(248, 250, 252, 0.6); */
+  /* border: 1px solid rgba(226, 232, 240, 0.8); */
+  /* border-radius: 20px; */
+  padding: 0 ;
+}
+
+.oi-features-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.oi-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.oi-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  transition: all 0.3s ease;
+}
+
+.oi-feature-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.oi-feature-item:hover {
+  transform: translateX(8px);
+}
+
+.oi-check-box {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 77, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff4d00;
+  transition: all 0.3s ease;
+}
+
+.oi-feature-item:hover .oi-check-box {
+  background: #ff4d00;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 77, 0, 0.3);
+}
+
+.oi-feature-text {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .oi-main-card {
+    flex-direction: column;
+  }
+
+  .oi-card-left {
+    padding: 40px;
+    border-right: none;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  }
+
+  .oi-card-right {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .optimize-investments-section {
+    /* padding: 45px 0; */
+  }
+
+  .oi-title {
+    font-size: 32px;
+  }
+
+  .oi-subtitle {
+    margin-bottom: 24px;
+  }
+
+  /* ================================
+     MOBILE TAB GRID
+     ================================ */
+
+  .oi-tabs-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+
+  .oi-tab {
+    width: 100%;
+    min-width: 0;
+    min-height: 54px;
+    padding: 10px 12px;
+
+    border-radius: 16px;
+
+    justify-content: flex-start;
+
+    font-size: 13px;
+    line-height: 1.25;
+
+    transform: none;
+  }
+
+  .oi-tab:hover,
+  .oi-tab.active {
+    transform: translateY(-2px);
+  }
+
+  .oi-tab-content {
+    width: 100%;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .oi-tab-content span {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+    text-align: left;
+  }
+
+  /* Icon */
+  .oi-tab-icon-wrapper {
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .oi-tab-icon-wrapper svg:not(.oi-tab-icon-ring) {
+    width: 15px;
+    height: 15px;
+  }
+
+  .oi-tab-icon-ring {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Make the active background animation more appropriate
+     for the smaller mobile cards */
+  .oi-tab:hover::before,
+  .oi-tab.active::before {
+    width: 220px;
+    height: 220px;
+  }
+
+
+  /* ================================
+     SMALLER MOBILE ORB
+     ================================ */
+
+  .oi-card-left {
+    padding: 28px;
+  }
+
+  .oi-orb-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .oi-orb-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+  }
+
+  .oi-orb-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .oi-card-right {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .oi-title {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .oi-subtitle {
+    font-size: 16px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+
+  /* ================================
+     TABS
+     ================================ */
+
+  .oi-tabs-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .oi-tab {
+    min-height: 50px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    font-size: 12px;
+  }
+
+  .oi-tab-content {
+    gap: 8px;
+  }
+
+  .oi-tab-icon-wrapper {
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .oi-tab-icon-ring {
+    width: 30px;
+    height: 30px;
+  }
+
+  .oi-tab-icon-wrapper svg:not(.oi-tab-icon-ring) {
+    width: 14px;
+    height: 14px;
+  }
+
+
+  /* ================================
+     ORB
+     ================================ */
+
+  .oi-card-left {
+    padding: 22px;
+  }
+
+  .oi-orb-container {
+    width: 105px;
+    height: 105px;
+  }
+
+  .oi-orb-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 14px;
+  }
+
+  .oi-orb-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .oi-card-right {
+    padding: 16px;
+  }
+
+  .oi-content-title{
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .oi-feature-item{
+    padding: 6px 0;
+  }
+}

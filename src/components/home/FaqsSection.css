@@ -1,0 +1,10 @@
+.accordion-asked .accordion-collapse,
+.accordion-asked .accordion-collapse.show,
+.accordion-asked .accordion-body {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.section-faqs {
+  background-color: #EDECEC;
+}

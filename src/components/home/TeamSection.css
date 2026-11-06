@@ -1,0 +1,33 @@
+/* Founder card initial state */
+.founder-card {
+  opacity: 0;
+  will-change: transform, opacity;
+
+  transition:
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Starting positions */
+.founder-left {
+  transform: translate3d(-70px, 30px, 0) rotate(-2deg);
+}
+
+.founder-right {
+  transform: translate3d(70px, 30px, 0) rotate(2deg);
+}
+
+/* Animated/final state */
+.founder-card.animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) rotate(0deg);
+}
+
+/* Slight stagger */
+.founder-left {
+  transition-delay: 1.5s;
+}
+
+.founder-right {
+  transition-delay: 1.6s;
+}

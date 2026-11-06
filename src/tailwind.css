@@ -1,0 +1,433 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Official brand colors for desktop footer social items */
+.brand-facebook .social-item {
+  background: #1877F2 !important;
+  box-shadow: none !important;
+}
+
+.brand-facebook:hover .social-item {
+  background: #1877F2 !important;
+}
+
+.brand-instagram .social-item {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+  box-shadow: none !important;
+}
+
+.brand-instagram:hover .social-item {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+}
+
+.brand-youtube .social-item {
+  background: #FF0000 !important;
+  box-shadow: none !important;
+}
+
+.brand-youtube:hover .social-item {
+  background: #FF0000 !important;
+}
+
+.brand-linkedin .social-item {
+  background: #0A66C2 !important;
+  box-shadow: none !important;
+}
+
+.brand-linkedin:hover .social-item {
+  background: #0A66C2 !important;
+}
+
+.brand-x .social-item {
+  background: #000000 !important;
+  box-shadow: none !important;
+}
+
+.brand-x:hover .social-item {
+  background: #000000 !important;
+}
+
+/* Responsive Footer Visibility */
+@media (min-width: 769px) {
+  .footer-desktop-only {
+    display: block !important;
+  }
+
+  .footer-mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-desktop-only {
+    display: none !important;
+  }
+
+  .footer-mobile-only {
+    display: block !important;
+  }
+
+  .footer-mobile-only {
+    background-color: transparent !important;
+    color: #1f2937 !important;
+    padding: 36px 20px 24px !important;
+    font-family: inherit !important;
+    border-top: 1px solid #e5e7eb !important;
+    position: relative;
+    z-index: 10;
+  }
+
+  .mobile-footer-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* Logo */
+  .mobile-footer-logo {
+    text-align: center;
+  }
+
+  .mobile-footer-logo img {
+    height: 36px;
+    object-fit: contain;
+  }
+
+  /* Follow Us section */
+  .mobile-follow-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+    padding: 16px 0;
+  }
+
+  .mobile-follow-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #4b5563;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .mobile-social-icons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Card-like social buttons */
+  .mobile-social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #ffffff !important;
+    font-size: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    text-decoration: none !important;
+  }
+
+  .mobile-social-item:active {
+    transform: scale(0.95);
+  }
+
+  .mobile-social-item i {
+    color: #ffffff !important;
+  }
+
+  /* Official brand colors for mobile social buttons */
+  .mobile-social-item.brand-facebook {
+    background: #1877F2 !important;
+  }
+
+  .mobile-social-item.brand-instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+  }
+
+  .mobile-social-item.brand-youtube {
+    background: #FF0000 !important;
+  }
+
+  .mobile-social-item.brand-linkedin {
+    background: #0A66C2 !important;
+  }
+
+  .mobile-social-item.brand-x {
+    background: #000000 !important;
+  }
+
+  /* Two column layout for Contact and Navigate */
+  .mobile-footer-columns {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
+  }
+
+  .mobile-footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .mobile-col-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 4px 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 4px;
+    display: inline-block;
+    width: fit-content;
+  }
+
+  /* Contact fields stack */
+  .mobile-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .mobile-contact-field .field-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .mobile-contact-field .field-value {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #374151;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .mobile-contact-field .field-value a {
+    color: #ff0000 !important;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* Navigate links */
+  .mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .mobile-nav-links li {
+    margin: 0;
+  }
+
+  .mobile-nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+    display: block;
+    padding: 4px 0;
+    /* touch friendly */
+  }
+
+  .mobile-nav-links a:active {
+    color: #ff0000 !important;
+  }
+
+  /* Footer Bottom */
+  .mobile-footer-bottom {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .mobile-copyright {
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+
+  .mobile-back-to-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff0000 !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+    border: 1px solid #fee2e2;
+    border-radius: 20px;
+    background-color: #fff5f5;
+    transition: background-color 0.2s ease;
+  }
+
+  .mobile-back-to-top:active {
+    background-color: #fee2e2;
+  }
+
+  .mobile-back-to-top i {
+    font-size: 14px;
+  }
+}
+
+/* Tool Section V2 Images Styling to prevent stretching */
+.tool-wrap .img-item {
+  object-fit: cover !important;
+  filter: hue-rotate(160deg) saturate(1.5) !important;
+}
+
+.tool-wrap .image-center img {
+  /* filter: hue-rotate(160deg) saturate(1.5) !important; */
+}
+
+.tool-wrap .image-center {
+  overflow: hidden !important;
+  background: #fff !important;
+  border-radius: 12px !important;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25) !important;
+  padding: 16px 12px;
+}
+
+.tool-wrap .image-center img {
+  width: 100% !important;
+  /* height: 100% !important; */
+  object-fit: contain !important;
+  /* transform: scale(3.1) !important; */
+}
+
+.tool-wrap .image-center {
+  width: 160px !important;
+  /* height: 75px !important; */
+}
+
+.tool-wrap .img-item-1,
+.tool-wrap .img-item-6,
+.tool-wrap .img-item-3,
+.tool-wrap .img-item-4,
+.tool-wrap .img-item-2,
+.tool-wrap .img-item-5  {
+  width: 103px !important;
+  height: 103px !important;
+}
+
+/* .tool-wrap .img-item-2,
+.tool-wrap .img-item-5 {
+  width: 80px !important;
+  height: 80px !important;
+} */
+
+/* Home Page Tools Section Images Override to prevent stretching */
+.section-tools>img {
+  object-fit: cover !important;
+  aspect-ratio: 1 / 1 !important;
+  filter: hue-rotate(160deg) saturate(1.5) !important;
+}
+
+/* Global Container Override to align with Navbar (.navContainer max-width 1250px) */
+.container {
+  width: 100% !important;
+  max-width: 1250px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* Page Content Wrapper — full width so section backgrounds span the viewport */
+#page-content {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* Tools Section Layout Fixes */
+.tool-wrap .line-1 {
+  position: absolute !important;
+  top: 63px !important;
+  left: 66px !important;
+}
+
+.tool-wrap .line-2 {
+  position: absolute !important;
+  top: 50% !important;
+  left: 66px !important;
+}
+
+.tool-wrap .line-3 {
+  position: absolute !important;
+  bottom: 66px !important;
+  left: 66px !important;
+}
+
+.tool-wrap .line-4 {
+  position: absolute !important;
+  top: 63px !important;
+  right: 66px !important;
+}
+
+.tool-wrap .line-5 {
+  position: absolute !important;
+  top: 50% !important;
+  right: 66px !important;
+}
+
+.tool-wrap .line-6 {
+  position: absolute !important;
+  bottom: 66px !important;
+  right: 66px !important;
+}
+
+/* Mobile & Tablet Overrides to center lines and match spacing */
+@media (max-width: 767px) {
+  .tool-wrap .line-1 {
+    top: 63px !important;
+    left: 83px !important;
+  }
+
+  .tool-wrap .line-3 {
+    bottom: 63px !important;
+    left: 83px !important;
+  }
+
+  .tool-wrap .line-4 {
+    top: 63px !important;
+    right: 83px !important;
+  }
+
+  .tool-wrap .line-6 {
+    bottom: 63px !important;
+    right: 83px !important;
+  }
+}

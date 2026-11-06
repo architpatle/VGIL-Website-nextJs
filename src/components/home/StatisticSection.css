@@ -1,0 +1,166 @@
+/* ---------------------------------------------------------
+  Section: Delivery Promise (redesigned Statistic Section)
+  Uses site tokens: var(--brand), var(--neutral-*), heading-section,
+  heading-sub, heading-title, text-body-1, text-neutral-400
+------------------------------------------------------------ */
+
+.section-delivery-promise {
+  position: relative;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+/* ---------- Left column heading tweaks ---------- */
+.section-delivery-promise .heading-section .heading-title {
+  margin-bottom: 20px;
+}
+
+.section-delivery-promise .heading-section .text {
+  max-width: 420px;
+}
+
+/* ---------- Right column image ---------- */
+.section-delivery-promise .delivery-promise-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-delivery-promise .delivery-promise-image img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .section-delivery-promise .delivery-promise-image {
+    margin-top: 32px;
+  }
+}
+
+/* ---------- Metric cards row ----------
+   A dedicated CSS Grid (rather than relying on the site's Bootstrap
+   row/col stretch behaviour) so every card is forced to the exact
+   same width and height, on every breakpoint, regardless of how
+   much text each card holds. */
+.section-delivery-promise .metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  /* margin-top: 64px; */
+}
+
+@media (max-width: 767px) {
+  .section-delivery-promise .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .section-delivery-promise .metric-card {
+    width: 100%;
+    min-height: 220px;
+  }
+}
+
+.section-delivery-promise .metric-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  min-height: 256px;
+  padding: 32px 24px;
+  border-radius: 20px;
+  background-color: var(--white);
+  border: 1px solid var(--neutral-200);
+  box-shadow: 0px 4px 20px 0px rgba(24, 24, 27, 0.04);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .section-delivery-promise .metric-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-delivery-promise .metric-card {
+    min-height: 168px;
+  }
+}
+
+.section-delivery-promise .metric-card:hover {
+  box-shadow: 0px 8px 28px 0px rgba(24, 24, 27, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Icon circle — monochrome brand-tinted system, each card slightly
+   deeper in opacity so the row reads as one consistent color family */
+.section-delivery-promise .metric-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  color: var(--brand);
+  background-color: color-mix(in srgb, var(--brand) 12%, var(--white));
+}
+
+.section-delivery-promise .metric-card:nth-child(1) .metric-icon {
+  background-color: color-mix(in srgb, var(--brand) 10%, var(--white));
+}
+
+.section-delivery-promise .metric-card:nth-child(2) .metric-icon {
+  background-color: color-mix(in srgb, var(--brand) 16%, var(--white));
+}
+
+.section-delivery-promise .metric-card:nth-child(3) .metric-icon {
+  background-color: color-mix(in srgb, var(--brand) 22%, var(--white));
+}
+
+.section-delivery-promise .metric-card:nth-child(4) .metric-icon {
+  background-color: color-mix(in srgb, var(--brand) 28%, var(--white));
+}
+
+.section-delivery-promise .metric-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--neutral-900);
+  margin-bottom: 12px;
+}
+
+.section-delivery-promise .metric-underline {
+  width: 32px;
+  height: 2px;
+  background-color: var(--brand);
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+
+.section-delivery-promise .metric-desc {
+  margin: 0;
+  flex-grow: 1;
+}
+
+@media (max-width: 767px) {
+  .section-delivery-promise .metric-card {
+    padding: 24px 18px;
+  }
+
+  .section-delivery-promise .metric-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .section-delivery-promise .metric-title {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}

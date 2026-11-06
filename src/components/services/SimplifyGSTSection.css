@@ -1,0 +1,342 @@
+.simplify-gst-section {
+  /* padding: 20px 0 80px 0; */
+  /* background-color: #fbfbfc; */
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.simplify-gst-section::before,
+.simplify-gst-section::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  /* background: radial-gradient(circle, rgba(255, 51, 0, 0.05) 0%, rgba(255, 51, 0, 0) 70%); */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.simplify-gst-section::before {
+  top: -100px;
+  left: -100px;
+}
+
+.simplify-gst-section::after {
+  bottom: -100px;
+  right: -100px;
+}
+
+.simplify-gst-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.simplify-gst-section .main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.simplify-gst-section .main-title::before,
+.simplify-gst-section .main-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #ff3300;
+  position: relative;
+}
+
+.simplify-gst-section .main-title::before {
+  margin-right: 10px;
+}
+
+.simplify-gst-section .main-title::after {
+  margin-left: 10px;
+}
+
+.simplify-gst-section .highlight {
+  color: #ff3300;
+}
+
+.simplify-gst-section .info-box {
+  background: #ffffff;
+  border: 1px solid rgba(255, 51, 0, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  margin: 0 auto 50px;
+  max-width: 900px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03), 0 0 0 10px rgba(255, 51, 0, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.simplify-gst-section .info-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  text-align: center;
+}
+
+.simplify-gst-section .icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.simplify-gst-section .line-divider {
+  width: 60px;
+  height: 4px;
+  background: #ff3300;
+  margin: 0 auto 40px;
+  border-radius: 2px;
+}
+
+.simplify-gst-section .sub-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.simplify-gst-section .sub-title::before,
+.simplify-gst-section .sub-title::after {
+  content: '◆';
+  font-size: 0.8rem;
+  color: #ff3300;
+  margin: 0 20px;
+  opacity: 0.7;
+}
+
+.simplify-gst-section .sub-desc {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin-bottom: 60px;
+}
+
+.simplify-gst-section .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.simplify-gst-section .connecting-line {
+  position: absolute;
+  top: 140px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 51, 0, 0) 0%, rgba(255, 51, 0, 0.2) 15%, rgba(255, 51, 0, 0.2) 85%, rgba(255, 51, 0, 0) 100%);
+  z-index: 0;
+}
+
+.simplify-gst-section .benefit-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  height: 100%;
+}
+
+.simplify-gst-section .card-number {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #cbd5e1;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 12px 12px 4px 4px;
+}
+
+.simplify-gst-section .benefit-card.active-card .card-number {
+  background: #cc2900;
+}
+
+.simplify-gst-section .card-icon-wrap {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  margin-top: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  position: relative;
+
+  /* color: #1a1a2e !important; */
+}
+
+.simplify-gst-section .card-icon-wrap::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 4px solid #ff9980;
+  z-index: -1;
+}
+
+.simplify-gst-section .benefit-card:nth-child(2) .card-icon-wrap::after {
+  left: -40px;
+}
+
+.simplify-gst-section .benefit-card:nth-child(3) .card-icon-wrap::after {
+  left: -40px;
+}
+
+.simplify-gst-section .benefit-card:nth-child(4) .card-icon-wrap::after {
+  left: -40px;
+}
+
+.simplify-gst-section .benefit-card:nth-child(5) .card-icon-wrap::after {
+  left: -40px;
+}
+
+.simplify-gst-section .card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.simplify-gst-section .card-title span {
+  font-weight: 500;
+}
+
+.simplify-gst-section .card-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.simplify-gst-section .card-arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  transition: all 0.3s ease;
+}
+
+.simplify-gst-section .benefit-card.active-card {
+  background: linear-gradient(145deg, #ff4d00 0%, #cc2900 100%);
+  color: #ffffff;
+  border: none;
+}
+
+.simplify-gst-section .benefit-card.active-card .card-title,
+.simplify-gst-section .benefit-card.active-card .card-desc {
+  color: #ffffff;
+}
+
+.simplify-gst-section .benefit-card.active-card .card-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.simplify-gst-section .benefit-card.active-card .card-icon-wrap {
+  color: #ff3300 !important;
+}
+
+@media (max-width: 1200px) {
+  .simplify-gst-section .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+
+  .simplify-gst-section .connecting-line {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .simplify-gst-section .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .simplify-gst-section .main-title {
+    font-size: 28px;
+    gap: 0;
+    margin-bottom: 12px;
+  }
+
+  .simplify-gst-section .main-title::before,
+  .simplify-gst-section .main-title::after {
+    display: none;
+  }
+
+  .simplify-gst-section .info-box {
+    flex-direction: column;
+    padding: 24px;
+    gap: 12px;
+  }
+
+  .simplify-gst-section .line-divider {
+    margin-bottom: 12px;
+  }
+
+  .simplify-gst-section .sub-title::before,
+  .simplify-gst-section .sub-title::after {
+    display: none;
+  }
+
+  .simplify-gst-section .sub-title{
+    font-size: 28px;
+  }
+  .simplify-gst-section .sub-desc {
+    margin-bottom: 12px;
+  }
+  .simplify-gst-section .card-icon-wrap{
+    height: 60px;
+    width: 60px;
+    margin-bottom: 0;
+  }
+  .simplify-gst-section .card-title, .simplify-gst-section .card-desc{
+    margin-bottom: 0;
+  }
+}

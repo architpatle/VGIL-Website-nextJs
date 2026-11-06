@@ -1,0 +1,298 @@
+/* =========================================================
+   DIGITAL PROVIDE SECTION
+   Styled to match DRDCServicesProvideSection
+   ========================================================= */
+
+.ds-provide-section {
+  /* background-color: #ffffff; */
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.ds-provide-wrapper {
+  position: relative;
+  border-radius: 20px;
+  padding: 45px;
+  background: #ffffff;
+  border: 2px solid #ffefe8;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIVE SHAPES
+   Same treatment as DRDC shapes
+   ========================================================= */
+
+.ds-provide-glow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 51, 0, 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ds-provide-glow-1 {
+  top: -100px;
+  right: -100px;
+}
+
+.ds-provide-glow-2 {
+  bottom: -100px;
+  left: -100px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.ds-provide-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.ds-provide-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: rgba(255, 51, 0, 0.1);
+  color: #ff5533;
+
+  padding: 10px 28px;
+  border-radius: 50px;
+
+  border: 1px solid rgba(255, 51, 0, 0.2);
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  margin-bottom: 16px;
+}
+
+.ds-provide-badge .badge-icon {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.ds-provide-title {
+  color: #1f2937;
+  font-size: 2.5rem;
+  font-weight: 800;
+
+  margin: 0 0 12px;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.ds-provide-subtitle {
+  color: #9ca3af;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+   ========================================================= */
+
+.ds-provide-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+
+/* =========================================================
+   SERVICE ITEM
+   ========================================================= */
+
+.ds-provide-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+
+  border-radius: 12px;
+
+  padding: 30px 20px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  text-align: center;
+}
+
+
+/*
+  Important:
+  The actual hover scale/background/border is handled
+  by Framer Motion in the JSX, exactly like DRDC.
+*/
+
+.ds-provide-item:hover .ds-provide-icon {
+  background-color: #ff3300;
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.ds-provide-icon {
+  width: 48px;
+  height: 48px;
+
+  background-color: #fff5f2;
+  color: #ff3300;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.ds-provide-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* =========================================================
+   SERVICE TEXT
+   ========================================================= */
+
+.ds-provide-text {
+  color: #1f2937;
+  font-size: 1.05rem;
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.ds-provide-item:hover .ds-provide-text {
+  color: #ff3300;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.ds-provide-desc-box {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  margin-top: 40px;
+  padding: 30px 0 0;
+
+  border-top: 1px solid #f1f5f9;
+}
+
+.ds-provide-desc-text {
+  color: #9ca3af;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+  .ds-provide-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .ds-provide-wrapper {
+    padding: 24px;
+  }
+
+  .ds-provide-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ds-provide-badge {
+    font-size: 1.15rem;
+    padding: 12px;
+  }
+
+  .ds-provide-item {
+    padding: 16px;
+
+    border: 1px solid #ff33004d;
+
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .ds-provide-icon {
+    flex-shrink: 0;
+  }
+
+  .ds-provide-text {
+    text-align: left;
+  }
+
+  .ds-provide-title {
+    font-size: 2rem;
+  }
+}

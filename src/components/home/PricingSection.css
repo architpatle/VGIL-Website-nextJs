@@ -1,0 +1,23 @@
+.pricing-item {
+    /* transition: all 0.45s ease; */
+}
+
+.active-card {
+    opacity: 1;
+    filter: blur(0px);
+    /* transform: scale(1); */
+    pointer-events: auto;
+}
+
+.inactive-card {
+    opacity: .6 !important;
+    filter: blur(2px);
+    /* transform: scale(0.97); */
+    pointer-events: none;
+}
+
+@media (max-width: 480px) {
+     .ps-list{
+        display: none !important;
+     }
+}

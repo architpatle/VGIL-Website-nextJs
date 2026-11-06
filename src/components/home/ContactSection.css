@@ -1,0 +1,987 @@
+/* ================================================================
+   CONTACT SECTION
+================================================================ */
+
+/* ---- Section Contact ---- */
+
+.section-contact {
+  position: relative;
+  padding: 42px;
+}
+
+.section-contact .contact-image {
+  position: absolute;
+  inset: 0 16px;
+  border-radius: 40px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.section-contact .contact-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 1;
+}
+
+.section-contact .contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.section-contact .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-container-custom {
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+
+/* ================================================================
+   LEFT COLUMN
+================================================================ */
+
+.section-contact .col-left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+
+/* ================================================================
+   HEADING
+================================================================ */
+
+.heading-section .heading-title {
+  font-size: clamp(38px, 4.5vw, 60px);
+  font-weight: 600;
+  color: #09090B;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+
+/* ================================================================
+   CONTACT BADGE
+================================================================ */
+
+.contact-badge-pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FD3A25;
+  display: inline-block;
+}
+
+
+/* ================================================================
+   CONTACT ITEMS
+================================================================ */
+
+.contact-items-wrapper {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-contact .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  flex-shrink: 0;
+
+  border-radius: 16px;
+
+  color: #09090B;
+  background-color: #FFFFFF;
+
+  box-shadow:
+    0px 10px 20px rgba(0, 0, 0, 0.02),
+    0px 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.contact-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-item-title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #09090B;
+}
+
+.contact-item-text {
+  color: #52525B;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item-text:hover {
+  color: #FD3A25;
+}
+
+
+/* ================================================================
+   FORM CARD
+================================================================ */
+
+.section-contact .form-contact {
+  margin-left: 12px;
+  margin-right: -12px;
+
+  padding: 28px;
+
+  border-radius: 40px;
+
+  background-color: #FFFFFF;
+
+  box-shadow:
+    0px 30px 60px rgba(0, 0, 0, 0.04),
+    0px 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.section-contact .form-contact .heading {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  color: #09090B;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* ================================================================
+   FORM FIELDS
+================================================================ */
+
+.form-contact fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 16px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-contact label {
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #09090B;
+
+  margin-bottom: 6px;
+}
+
+
+/* ---- Normal Inputs ---- */
+
+.form-contact input,
+.form-contact textarea {
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1.5px solid #E4E4E7;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  color: #09090B;
+
+  outline: none;
+  border-radius: 0;
+
+  transition: border-color 0.3s ease;
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus {
+  border-bottom-color: #FD3A25;
+}
+
+.form-contact input::placeholder,
+.form-contact textarea::placeholder {
+  color: #A1A1AA;
+  font-size: 14px;
+}
+
+.form-contact textarea {
+  height: 60px;
+  resize: none;
+}
+
+
+/* ================================================================
+   PHONE INPUT
+================================================================ */
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+
+  gap: 14px;
+}
+
+
+/* ================================================================
+   CUSTOM COUNTRY DROPDOWN
+================================================================ */
+
+.custom-country-dropdown {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+}
+
+
+/* ---- Phone dropdown width ---- */
+
+.phone-input-wrapper .custom-country-dropdown {
+  width: 60px;
+  min-width: 60px;
+  max-width: 80px;
+
+  flex: 0 0 120px;
+}
+
+.phone-input-wrapper .country-dropdown-menu {
+  width: 260px;
+  min-width: 260px;
+  left: 0;
+  right: auto;
+  max-width: 80vw;
+}
+
+
+/* ---- Country field dropdown width ---- */
+
+.form-contact > fieldset > .custom-country-dropdown {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+
+  flex: none;
+}
+
+
+/* ================================================================
+   DROPDOWN TRIGGER
+================================================================ */
+
+.country-dropdown-trigger {
+  width: 100%;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1.5px solid #E4E4E7;
+
+  background: transparent;
+
+  color: #09090B;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+
+  cursor: pointer;
+
+  outline: none;
+
+  transition: border-color 0.3s ease;
+}
+
+.country-dropdown-trigger:hover {
+  border-bottom-color: #D4D4D8;
+}
+
+.custom-country-dropdown.is-open .country-dropdown-trigger {
+  border-bottom-color: #FD3A25;
+}
+
+
+/* ================================================================
+   SELECTED COUNTRY
+================================================================ */
+
+.country-selected-content {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.country-selected-name {
+  min-width: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.country-selected-code {
+  white-space: nowrap;
+}
+
+
+/* ---- Flag ---- */
+
+.country-flag {
+  width: 22px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.country-flag svg {
+  width: 22px;
+  height: auto;
+
+  display: block;
+}
+
+
+/* ================================================================
+   PHONE SELECTED VALUE
+   Shows ONLY flag + country code
+================================================================ */
+
+.phone-input-wrapper .country-selected-content {
+  gap: 7px;
+}
+
+.phone-input-wrapper .country-selected-name {
+  display: none;
+}
+
+.phone-input-wrapper .country-selected-code {
+  display: inline-block;
+
+  font-size: 14px;
+}
+
+
+/* ================================================================
+   DROPDOWN ARROW
+================================================================ */
+
+.country-dropdown-arrow {
+  flex-shrink: 0;
+
+  color: #52525B;
+
+  transition: transform 0.25s ease;
+}
+
+.custom-country-dropdown.is-open
+.country-dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+
+/* ================================================================
+   DROPDOWN MENU
+================================================================ */
+
+.country-dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 8px);
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  background-color: #FFFFFF;
+
+  border: 1px solid #E4E4E7;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.10),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+
+  overflow: hidden;
+}
+
+
+/* ================================================================
+   DROPDOWN LIST
+================================================================ */
+
+.country-dropdown-list {
+  max-height: 240px;
+
+  overflow-y: auto;
+
+  padding: 5px;
+}
+
+
+/* ---- Scrollbar ---- */
+
+.country-dropdown-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.country-dropdown-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.country-dropdown-list::-webkit-scrollbar-thumb {
+  background: #D4D4D8;
+  border-radius: 10px;
+}
+
+
+/* ================================================================
+   DROPDOWN OPTION
+================================================================ */
+
+.country-dropdown-option {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 9px 10px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #09090B;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.country-dropdown-option:hover {
+  background-color: #F4F4F5;
+}
+
+.country-dropdown-option.selected {
+  background-color: rgba(253, 58, 37, 0.07);
+  color: #FD3A25;
+}
+
+
+/* ================================================================
+   DROPDOWN OPTION FLAG
+================================================================ */
+
+.country-option-flag {
+  width: 22px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.country-option-flag svg {
+  width: 22px;
+  height: auto;
+
+  display: block;
+}
+
+
+/* ================================================================
+   DROPDOWN OPTION NAME
+================================================================ */
+
+.country-option-name {
+  flex: 1;
+
+  min-width: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* ================================================================
+   DROPDOWN OPTION CODE
+================================================================ */
+
+.country-option-code {
+  margin-left: auto;
+
+  color: #71717A;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+
+/* ================================================================
+   PHONE NUMBER INPUT
+================================================================ */
+
+.phone-number-input {
+  flex: 1;
+
+  min-width: 0;
+
+  width: 100%;
+
+  padding: 10px 0;
+
+  border: none;
+  border-bottom: 1.5px solid #E4E4E7;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  color: #09090B;
+
+  outline: none;
+
+  border-radius: 0;
+
+  transition: border-color 0.3s ease;
+}
+
+.phone-number-input:focus {
+  border-bottom-color: #FD3A25;
+}
+
+.phone-number-input::placeholder {
+  color: #A1A1AA;
+  font-size: 14px;
+}
+
+
+/* ================================================================
+   COUNTRY DROPDOWN — NORMAL FIELD
+================================================================ */
+
+.form-contact > fieldset > .custom-country-dropdown
+.country-dropdown-trigger {
+  width: 100%;
+}
+
+
+/* ================================================================
+   ATTACHMENT
+================================================================ */
+
+.form-contact .attachment {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 24px;
+
+  cursor: pointer;
+
+  color: #09090B;
+
+  transition: color 0.3s ease;
+}
+
+.form-contact .attachment:hover {
+  color: #FD3A25;
+}
+
+.form-contact .attachment-icon {
+  color: #09090B;
+
+  transform: rotate(45deg);
+}
+
+.form-contact .attachment-text {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* ================================================================
+   RESPONSIVE — TABLET
+================================================================ */
+
+@media (max-width: 1199px) {
+
+  .contact-container-custom {
+    max-width: 90%;
+  }
+
+  .section-contact .form-contact {
+    margin-left: 0;
+    margin-right: 0;
+
+    padding: 36px 32px;
+  }
+
+}
+
+
+/* ================================================================
+   RESPONSIVE — SMALL TABLET
+================================================================ */
+
+@media (max-width: 991px) {
+
+  .contact-container-custom {
+    max-width: 100% !important;
+  }
+
+  .section-contact {
+    padding: 40px 20px;
+  }
+
+  .section-contact .col-left {
+    padding: 12px 0 32px;
+  }
+
+}
+
+
+/* ================================================================
+   RESPONSIVE — MOBILE
+================================================================ */
+
+@media (max-width: 767px) {
+
+  .section-contact {
+    padding: 24px 12px;
+  }
+
+  .section-contact .contact-image {
+    inset: 0;
+
+    border-radius: 20px;
+  }
+
+  .section-contact .contact-image img {
+    border-radius: 20px;
+  }
+
+
+  /* ---- Heading ---- */
+
+  .section-contact .heading-section {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-align: left;
+
+    margin-bottom: 12px;
+  }
+
+  .section-contact .heading-section .heading-title {
+    order: 1;
+
+    flex: 1;
+
+    font-size: clamp(22px, 6vw, 32px);
+
+    margin-top: 0;
+  }
+
+
+  /* ---- Contact items ---- */
+
+  .contact-items-wrapper {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 4px 8px;
+
+    margin-top: 10px;
+  }
+
+  .section-contact .contact-item {
+    gap: 8px;
+
+    align-items: flex-start;
+  }
+
+  .contact-item-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+  }
+
+  .contact-item-title {
+    font-size: 11px;
+  }
+
+  .contact-item-text {
+    font-size: 12px;
+  }
+
+
+  /* ---- Form ---- */
+
+  .section-contact .form-contact {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 20px 18px !important;
+
+    border-radius: 20px !important;
+  }
+
+  .section-contact .form-contact .heading {
+    font-size: 12px !important;
+
+    margin-bottom: 15px !important;
+  }
+
+  .form-contact fieldset {
+    margin-bottom: 12px !important;
+  }
+
+  .form-contact input,
+  .form-contact textarea {
+    font-size: 14px !important;
+
+    padding: 7px 0 !important;
+  }
+
+
+  /* ---- Phone ---- */
+
+  .phone-input-wrapper {
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .phone-input-wrapper .custom-country-dropdown {
+    width: 105px;
+
+    min-width: 105px;
+    max-width: 105px;
+
+    flex: 0 0 105px;
+  }
+
+  .phone-input-wrapper
+  .country-dropdown-trigger {
+    height: 39px;
+
+    font-size: 14px;
+  }
+
+  .phone-input-wrapper
+  .phone-number-input {
+    min-width: 0;
+
+    font-size: 14px !important;
+
+    padding: 7px 0 !important;
+  }
+
+
+  /* ---- Dropdown ---- */
+
+  .country-dropdown-menu {
+    top: calc(100% + 6px);
+
+    border-radius: 10px;
+  }
+
+  .country-dropdown-list {
+    max-height: 220px;
+  }
+
+  .country-dropdown-option {
+    padding: 8px;
+
+    font-size: 13px;
+  }
+
+
+  /* ---- Attachment ---- */
+
+  .form-contact .attachment {
+    margin-bottom: 15px !important;
+  }
+
+}
+
+
+/* ================================================================
+   RESPONSIVE — SMALL MOBILE
+================================================================ */
+
+@media (max-width: 480px) {
+
+  .section-contact {
+    padding: 16px 8px;
+  }
+
+  .contact-items-wrapper {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 4px 6px;
+  }
+
+
+  /* ---- Form ---- */
+
+  .section-contact .form-contact {
+    padding: 20px 14px !important;
+
+    border-radius: 16px !important;
+  }
+
+
+  /* ---- Contact icons ---- */
+
+  .contact-item-icon {
+    width: 36px !important;
+    height: 36px !important;
+
+    border-radius: 10px !important;
+  }
+
+
+  /* ---- Heading ---- */
+
+  .heading-section .heading-title {
+    font-size: 28px !important;
+  }
+
+
+  /* ---- Phone ---- */
+
+  .phone-input-wrapper {
+    gap: 8px;
+  }
+
+  .phone-input-wrapper .custom-country-dropdown {
+    width: 88px;
+
+    min-width: 88px;
+    max-width: 88px;
+
+    flex: 0 0 88px;
+  }
+
+  .phone-input-wrapper
+  .country-selected-code {
+    font-size: 13px;
+  }
+
+  .phone-input-wrapper
+  .country-selected-content {
+    gap: 5px;
+  }
+
+
+  /* ---- Flags ---- */
+
+  .country-flag,
+  .country-option-flag {
+    width: 20px;
+  }
+
+  .country-flag svg,
+  .country-option-flag svg {
+    width: 20px;
+  }
+
+
+  /* ---- Dropdown ---- */
+
+  .country-dropdown-option {
+    padding: 8px;
+
+    font-size: 13px;
+  }
+
+  .country-dropdown-list {
+    max-height: 200px;
+  }
+
+}
+
+.contact-form-status {
+  margin-top: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.contact-form-status.success {
+  color: #198754;
+}
+
+.contact-form-status.error {
+  color: #dc3545;
+}

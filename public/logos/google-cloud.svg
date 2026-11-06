@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 322 258">
+  <path d="M195.6 74.4h-7.2l-20.4 20.4v7.2L186.4 120h8.8l15.6-15.6v-8.8L195.6 74.4z" fill="#EA4335"/>
+  <path d="M96 74.4H64.8L44.4 94.8v8.8L60 118.4h35.6l15.6-15.6V94l-15.2-19.6z" fill="#4285F4"/>
+  <path fill="#4285F4" d="M197.6 174.4h-7.2l-20.4 20.4v7.2l18.4 18.4h8.8l15.6-15.6v-8.8l-15.2-21.6z"/>
+  <path d="M99.6 174h-35.2L44 194.4v8.8l15.6 15.6H96l15.6-15.6v-8.8L99.6 174z" fill="#34A853"/>
+  <path d="M147.6 124.4h-7.2l-20.4 20.4v7.2l18.4 18.4h8.8l15.6-15.6v-8.8l-15.2-21.6z" fill="#FBBC05"/>
+  <text x="10" y="250" font-family="Arial" font-size="18" fill="#5f6368" font-weight="500">Google Cloud</text>
+</svg>

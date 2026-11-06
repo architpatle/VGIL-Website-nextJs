@@ -1,0 +1,332 @@
+.whyChooseUsHeading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.whyChooseUsHeadingSub {
+  /* margin: 0 !important; */
+  /* padding: 0 ; */
+}
+
+.whyChooseUsHeadingTitle {
+  margin: 0 !important;
+  padding: 0 !important;
+
+}
+
+.performanceGrid {
+  /* display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); */
+  gap: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* margin-bottom: 30px; */
+  /* height: 100px; */
+}
+
+.metricCard {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+
+  background-color: var(--neutral-50);
+  box-shadow: 0px 7.77px 16px 0px rgba(0, 0, 0, 0.0588235294), 0px 3px 3px 0px rgba(0, 0, 0, 0.1019607843), 0px -4px 0px 0px rgba(0, 0, 0, 0.0509803922) inset, 0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset;
+  /* border: 1px solid rgba(255, 59, 48, 0.08); */
+
+  border-radius: 12px;
+
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.metricCard::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(135deg,
+      rgba(255, 59, 48, 0.04),
+      transparent 60%);
+
+  pointer-events: none;
+}
+
+.wcuRow {
+  margin-bottom: 24px;
+}
+
+/* .metricCard:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  border-color: rgba(255, 59, 48, 0.2);
+} */
+
+.progressCircle {
+  position: relative;
+
+  width: 75px;
+  height: 75px;
+
+  margin-bottom: 6px;
+
+  flex-shrink: 0;
+}
+
+.progressCircle svg {
+  width: 100%;
+  height: 100%;
+
+  transform: rotate(-90deg);
+}
+
+.bgCircle {
+  fill: none;
+
+  stroke: rgba(48, 255, 79, 0.12);
+
+  stroke-width: 8;
+}
+
+.progressRing {
+  fill: none;
+
+  stroke: #83e671;
+
+  stroke-width: 8;
+
+  stroke-linecap: round;
+
+  stroke-dasharray: 327;
+
+  stroke-dashoffset: calc(327 - (327 * var(--progress)) / 100);
+
+  animation: fillRing 1.5s ease forwards;
+}
+
+.metricCenter {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metricValue {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+
+  color: #1a1a1a;
+}
+
+.metricLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #1a1a1a;
+
+  text-align: center;
+}
+
+.metricLabel span:first-child {
+  font-size: 16px;
+}
+
+.checkIcon {
+  color: #ff3b30 !important;
+}
+
+@keyframes fillRing {
+  from {
+    stroke-dashoffset: 327;
+  }
+}
+
+@media (max-width:1110px) {
+  .progressCircle {
+    width: 82px;
+    height: 82px;
+  }
+
+  .performanceGrid {
+    gap: 10px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .performanceGrid {
+    gap: 14px;
+  }
+
+  .progressCircle {
+    width: 82px;
+    height: 82px;
+  }
+
+  .metricValue {
+    font-size: 20px;
+  }
+}
+
+/* ===========================================================
+   Accordion behaviour (mobile only).
+   On desktop/tablet these rules simply don't apply — the cards
+   render exactly as before, fully expanded, with no click
+   handlers having any visual effect.
+   =========================================================== */
+@media (max-width: 767px) {
+
+  /* Header row: title + toggle icon. Only becomes clickable-looking
+     and gains the icon at this breakpoint. */
+  .accordionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  .accordionHeader .title {
+    margin-bottom: 0 !important;
+  }
+
+  /* Plus/minus toggle icon (same construction as the site's
+     existing .ic-accordion-custom pattern, scoped locally). */
+  .accordionIcon {
+    position: relative;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+
+  .accordionIcon::before,
+  .accordionIcon::after {
+    content: "";
+    position: absolute;
+    background-color: #ff3b30;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .accordionIcon::before {
+    width: 2px;
+    height: 100%;
+  }
+
+  .accordionIcon::after {
+    width: 100%;
+    height: 2px;
+  }
+
+  .accordionIconOpen::before {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  /* Collapsible wrapper. Uses the grid-rows fr trick so it can
+     animate to an unknown/dynamic height without JS measuring. */
+  .accordionBody {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+  }
+
+  .accordionBody.accordionBodyOpen {
+    grid-template-rows: 1fr;
+  }
+
+  .accordionBodyInner {
+    overflow: hidden;
+    min-height: 0;
+  }
+
+  /* Space between the header and the expanded body content. */
+  .accordionBodyOpen .accordionBodyInner {
+    padding-top: 14px;
+  }
+
+  .accordionCard {
+    transition: padding 0.3s ease;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  /* .wcuCard{
+    display: none !important;
+  } */
+
+
+  .performanceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    margin-bottom: 14px !important;
+  }
+
+  .metricCard {
+    padding: 4px;
+    border-radius: 8px;
+  }
+
+  .progressCircle {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+
+  .metricValue {
+    font-size: 14px;
+  }
+
+  .metricLabel {
+    font-size: 12px;
+    gap: 4px;
+    flex-direction: column;
+  }
+
+  .metricLabel span:first-child {
+    font-size: 14px;
+  }
+
+  .benefits-step-inner {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .wcuRow {
+    margin-bottom: 0px !important;
+  }
+
+  .wcuPara {
+    /* display: none !important; */
+  }
+}

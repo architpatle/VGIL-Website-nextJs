@@ -1,0 +1,386 @@
+.dr-solve-section {
+  /* background: #ffffff; */
+  overflow: hidden;
+  /* padding: 80px 0; */
+}
+
+
+/* =========================================
+   IMAGE AREA
+   ========================================= */
+
+.dr-solve-image-wrapper {
+  position: relative;
+  padding: 20px;
+}
+
+
+/* Backdrop */
+
+.dr-solve-backdrop {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 40px;
+  bottom: 40px;
+
+  background: #fff0eb;
+
+  border-radius: 20px;
+
+  z-index: 0;
+}
+
+
+/* Image */
+
+.dr-solve-img {
+  position: relative;
+
+  z-index: 1;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 20px 40px
+    rgba(0, 0, 0, 0.1);
+
+  width: 100%;
+  height: auto;
+
+  display: block;
+}
+
+
+/* =========================================
+   FLOATING OVERLAY CARD
+   ========================================= */
+
+.dr-solve-overlay-card {
+  position: absolute;
+
+  bottom: 10px;
+  right: 0;
+
+  background: #ffffff;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 15px 35px
+    rgba(255, 51, 0, 0.1);
+
+  z-index: 2;
+
+  border:
+    1px solid #ffefe8;
+
+  max-width: 200px;
+
+  animation:
+    dr-float 6s
+    ease-in-out infinite;
+}
+
+.dr-solve-overlay-card h4 {
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  margin: 0;
+
+  line-height: 1.3;
+}
+
+
+@keyframes dr-float {
+
+  0% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-15px);
+  }
+
+  100% {
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.dr-section-title {
+  font-size: 2.5rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  line-height: 1.2;
+}
+
+.dr-section-title .text-red {
+  color: #ff3300;
+}
+
+
+.dr-solve-text-box {
+  border-left:
+    4px solid #ff3300;
+
+  padding-left: 20px;
+}
+
+
+.dr-section-desc {
+  font-size: 1.1rem;
+
+  color: #4b5563;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.btn-outline-dr {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 12px 28px;
+
+  background-color: transparent;
+
+  color: #ff3300;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  border:
+    2px solid #ff3300;
+
+  transition:
+    all 0.3s ease;
+
+  cursor: pointer;
+}
+
+
+.btn-outline-dr:hover {
+  background-color: #ff3300;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 992px) {
+
+  .dr-solve-image-wrapper {
+    padding: 15px;
+  }
+
+  .dr-solve-backdrop {
+    right: 30px;
+    bottom: 30px;
+  }
+
+  .dr-solve-overlay-card {
+    right: 0;
+    bottom: 5px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* Image wrapper */
+
+  .dr-solve-image-wrapper {
+    padding: 12px;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* Backdrop */
+
+  .dr-solve-backdrop {
+    top: 0;
+    left: 0;
+
+    right: 25px;
+    bottom: 25px;
+
+    border-radius: 16px;
+  }
+
+
+  /* Image */
+
+  .dr-solve-img {
+    width: 100%;
+
+    border-radius: 16px;
+
+    box-shadow:
+      0 15px 30px
+      rgba(0, 0, 0, 0.08);
+  }
+
+
+  /* Overlay card */
+
+  .dr-solve-overlay-card {
+    right: 0;
+
+    bottom: 0;
+
+    max-width: 170px;
+
+    padding: 18px;
+
+    border-radius: 14px;
+  }
+
+
+  .dr-solve-overlay-card svg {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  .dr-solve-overlay-card h4 {
+    font-size: 0.95rem;
+
+    line-height: 1.3;
+  }
+
+
+  /* Content */
+
+  .dr-section-title {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  /* Image wrapper */
+
+  .dr-solve-image-wrapper {
+    padding: 8px;
+
+    margin-bottom: 15px;
+  }
+
+
+  /* Backdrop */
+
+  .dr-solve-backdrop {
+    right: 18px;
+    bottom: 18px;
+
+    border-radius: 14px;
+  }
+
+
+  /* Image */
+
+  .dr-solve-img {
+    border-radius: 14px;
+  }
+
+
+  /* Overlay */
+
+  .dr-solve-overlay-card {
+    right: -2px;
+    bottom: -2px;
+
+    max-width: 145px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+  }
+
+
+  .dr-solve-overlay-card svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .dr-solve-overlay-card h4 {
+    font-size: 0.82rem;
+
+    line-height: 1.25;
+
+    margin-top: 8px !important;
+  }
+
+
+  /* Content */
+
+  .dr-section-title {
+    font-size: 1.8rem;
+
+    line-height: 1.25;
+
+    margin-bottom: 20px !important;
+  }
+
+
+  .dr-solve-text-box {
+    padding-left: 15px;
+
+    border-left-width: 3px;
+  }
+
+
+  .dr-section-desc {
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+  }
+
+
+  .btn-outline-dr {
+    width: 100%;
+
+    justify-content: center;
+
+    padding: 11px 20px;
+
+    font-size: 0.9rem;
+  }
+}

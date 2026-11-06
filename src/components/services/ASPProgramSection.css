@@ -1,0 +1,1161 @@
+/* =========================================
+   ASP PROGRAM SECTION
+   ========================================= */
+
+.asp-program-section {
+  font-family: 'Inter', sans-serif;
+}
+
+
+/* =========================================
+   SECTION TITLE
+   ========================================= */
+
+.asp-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.asp-title .highlight-red {
+  color: #ff3300;
+}
+
+.title-underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 40px;
+
+  width: 100px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #ff3300,
+      transparent
+    );
+
+  position: relative;
+}
+
+.title-underline .dot {
+  width: 6px;
+  height: 6px;
+
+  background: #ff3300;
+
+  border-radius: 50%;
+
+  position: absolute;
+}
+
+
+/* =========================================
+   LEFT CARD
+   ========================================= */
+
+.asp-left-card {
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  padding: 40px 20px;
+
+  position: relative;
+
+  text-align: center;
+
+  border: 1px solid #fff0eb;
+
+  box-shadow:
+    0 20px 40px
+    rgba(255, 51, 0, 0.04);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.asp-left-card::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  border: 2px solid transparent;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffefe8,
+      transparent 40%
+    ) border-box;
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite:
+    destination-out;
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+
+/* Decorative dots */
+
+.asp-card-decor {
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+
+  background-image:
+    radial-gradient(
+      #ff3300 1px,
+      transparent 1px
+    );
+
+  background-size: 20px 20px;
+
+  opacity: 0.05;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   HANDSHAKE AREA
+   ========================================= */
+
+.asp-handshake-wrapper {
+  position: relative;
+
+  width: 160px;
+  height: 160px;
+
+  margin: 20px auto 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Rings */
+
+.ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid #ff3300;
+}
+
+.ring-1 {
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.1;
+}
+
+.ring-2 {
+  width: 80%;
+  height: 80%;
+
+  opacity: 0.2;
+}
+
+.ring-3 {
+  width: 60%;
+  height: 60%;
+
+  opacity: 0.3;
+
+  background: #fff5f2;
+}
+
+
+/* Center icon */
+
+.icon-center {
+  position: relative;
+
+  z-index: 2;
+
+  width: 90px;
+  height: 90px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 10px 20px
+    rgba(255, 51, 0, 0.1);
+}
+
+
+/* Floating dots */
+
+.floating-dot {
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  background: #ff3300;
+
+  border-radius: 50%;
+}
+
+.dot-1 {
+  top: 10%;
+  left: 20%;
+}
+
+.dot-2 {
+  bottom: 20%;
+  right: 10%;
+}
+
+.dot-3 {
+  top: 50%;
+  right: -5%;
+}
+
+
+/* =========================================
+   LEFT CARD TEXT
+   ========================================= */
+
+.asp-main-text h3 {
+  font-size: 1.6rem;
+
+  font-weight: 700;
+
+  color: #ff3300;
+
+  margin-bottom: 10px;
+}
+
+.asp-main-text p {
+  color: #4b5563;
+
+  font-size: 1rem;
+
+  font-weight: 500;
+
+  margin-bottom: 30px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   LEFT METRICS
+   ========================================= */
+
+.asp-left-metrics {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: auto;
+
+  border-top:
+    1px solid #f3f4f6;
+
+  padding-top: 20px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.metric-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.m-icon {
+  width: 36px;
+  height: 36px;
+
+  background: #fff5f2;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ff3300;
+
+  flex-shrink: 0;
+}
+
+.metric-item span {
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  color: #111827;
+
+  line-height: 1.2;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   RIGHT CARDS
+   ========================================= */
+
+.asp-right-card {
+  background: #ffffff;
+
+  border:
+    1px solid #f3f4f6;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 15px
+    rgba(0, 0, 0, 0.02);
+}
+
+
+/* =========================================
+   TOP CARD
+   ========================================= */
+
+.r-icon-box {
+  width: 48px;
+  height: 48px;
+
+  background: #fff5f2;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ff3300;
+
+  margin-right: 15px;
+
+  flex-shrink: 0;
+}
+
+.r-text {
+  margin: 0;
+
+  font-size: 0.9rem;
+
+  color: #111827;
+
+  font-weight: 500;
+
+  line-height: 1.45;
+}
+
+.right-border {
+  border-right:
+    1px solid #f3f4f6;
+}
+
+
+/* =========================================
+   MIDDLE CARD
+   ========================================= */
+
+.mid-card {
+  padding: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.benefits-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.benefits-header .line {
+  height: 1px;
+
+  flex-grow: 1;
+
+  background: #ffdbce;
+}
+
+.benefits-header .text {
+  font-weight: 700;
+
+  color: #ff3300;
+
+  font-size: 1.1rem;
+
+  white-space: nowrap;
+}
+
+
+/* Benefits */
+
+.benefits-grid {
+  display: flex;
+gap: 12px;
+  justify-content: space-between;
+}
+
+.benefit-item {
+  flex: 1;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 15px;
+
+  position: relative;
+
+  min-width: 0;
+}
+
+.benefit-item:not(:last-child)::after {
+  content: '';
+
+  position: absolute;
+
+  right: 0;
+  top: 10%;
+
+  height: 80%;
+  width: 1px;
+
+  background: #f3f4f6;
+}
+
+.b-icon-wrap {
+  width: 60px;
+  height: 60px;
+
+  background: #ffffff;
+
+  border:
+    2px solid #fff5f2;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ff3300;
+
+  box-shadow:
+    0 10px 20px
+    rgba(255, 51, 0, 0.05);
+
+  flex-shrink: 0;
+}
+
+.benefit-item span {
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  color: #111827;
+
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   BOTTOM CARD
+   ========================================= */
+
+.bottom-card {
+  background: #fff5f2;
+
+  border:
+    1px solid #ffdbce;
+}
+
+.bot-icon-wrap {
+  width: 50px;
+  height: 50px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ff3300;
+
+  box-shadow:
+    0 4px 10px
+    rgba(255, 51, 0, 0.1);
+
+  flex-shrink: 0;
+}
+
+.bot-text-wrap h4 {
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  margin-bottom: 5px;
+
+  line-height: 1.3;
+}
+
+.bot-text-wrap p {
+  font-size: 0.85rem;
+
+  color: #4b5563;
+
+  margin: 0;
+
+  line-height: 1.45;
+}
+
+
+/* CTA */
+
+.asp-cta-btn {
+  background: #e62e00;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 12px 24px;
+
+  border-radius: 50px;
+
+  font-weight: 600;
+
+  font-size: 0.95rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 20px
+    rgba(230, 46, 0, 0.2);
+
+  flex-shrink: 0;
+}
+
+.asp-cta-btn:hover {
+  background: #cc2900;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 12px 24px
+    rgba(230, 46, 0, 0.3);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 992px) {
+
+  /* Top card separators */
+
+  .right-border {
+    border-right: none;
+
+    border-bottom:
+      1px solid #f3f4f6;
+  }
+
+
+  /* Benefits become 2 x 2 */
+
+  .benefits-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 30px 20px;
+  }
+
+  .benefit-item {
+    min-width: 0;
+  }
+
+  .benefit-item::after {
+    display: none;
+  }
+
+
+  /* Bottom CTA */
+
+  .bottom-card {
+    text-align: center;
+  }
+
+  .bottom-card .d-flex {
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+  }
+
+  .bot-text-wrap {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .asp-cta-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  /* -----------------------------------------
+     Section title
+     ----------------------------------------- */
+
+  .asp-title {
+    font-size: 1.8rem;
+
+    line-height: 1.25;
+  }
+
+  .title-underline {
+    margin-bottom: 28px;
+  }
+
+
+  /* -----------------------------------------
+     Left card
+     ----------------------------------------- */
+
+  .asp-left-card {
+    padding:
+      30px 20px;
+  }
+
+
+  .asp-handshake-wrapper {
+    width: 140px;
+    height: 140px;
+
+    margin:
+      10px auto 24px;
+  }
+
+
+  .icon-center {
+    width: 78px;
+    height: 78px;
+  }
+
+  .icon-center svg {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .asp-main-text h3 {
+    font-size: 1.45rem;
+  }
+
+  .asp-main-text p {
+    font-size: 0.95rem;
+
+    margin-bottom: 24px;
+  }
+
+
+  /* -----------------------------------------
+     Metrics
+     ----------------------------------------- */
+
+  .asp-left-metrics {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 18px 12px;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+  }
+
+
+  .metric-item {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .m-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  .metric-item span {
+    font-size: 0.72rem;
+  }
+
+
+  /* -----------------------------------------
+     Right top card
+     ----------------------------------------- */
+
+  .top-card .row {
+    margin: 0;
+  }
+
+  .top-card .col-md-6 {
+    padding:
+      20px !important;
+  }
+
+
+  .r-icon-box {
+    width: 42px;
+    height: 42px;
+
+    margin-right: 12px;
+  }
+
+
+  .r-icon-box svg {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  .r-text {
+    font-size: 0.85rem;
+  }
+
+
+  /* -----------------------------------------
+     Middle card
+     ----------------------------------------- */
+
+  .mid-card {
+    padding: 24px 18px;
+  }
+
+
+  .benefits-header {
+    gap: 10px;
+
+    margin-bottom: 24px;
+  }
+
+
+  .benefits-header .text {
+    font-size: 1rem;
+  }
+
+
+  .benefits-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 24px 10px;
+  }
+
+
+  .benefit-item {
+    gap: 10px;
+  }
+
+
+  .b-icon-wrap {
+    width: 52px;
+    height: 52px;
+  }
+
+
+  .b-icon-wrap svg {
+    width: 21px;
+    height: 21px;
+  }
+
+
+  .benefit-item span {
+    font-size: 0.78rem;
+
+    line-height: 1.3;
+  }
+
+
+  /* -----------------------------------------
+     Bottom card
+     ----------------------------------------- */
+
+  .bottom-card .d-flex {
+    padding:
+      24px !important;
+
+    gap: 16px !important;
+  }
+
+
+  .bot-icon-wrap {
+    width: 46px;
+    height: 46px;
+  }
+
+
+  .bot-text-wrap h4 {
+    font-size: 0.95rem;
+  }
+
+
+  .bot-text-wrap p {
+    font-size: 0.8rem;
+  }
+
+
+  .asp-cta-btn {
+    padding:
+      11px 20px;
+
+    font-size: 0.9rem;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  /* -----------------------------------------
+     Section title
+     ----------------------------------------- */
+
+  .asp-title {
+    font-size: 1.5rem;
+
+    line-height: 1.25;
+
+    margin-bottom: 10px;
+  }
+
+
+  .title-underline {
+    width: 80px;
+
+    margin-bottom: 24px;
+  }
+
+
+  /* -----------------------------------------
+     Left card
+     ----------------------------------------- */
+
+  .asp-left-card {
+    padding:
+      24px 16px;
+  }
+
+
+  .asp-handshake-wrapper {
+    width: 120px;
+    height: 120px;
+
+    margin:
+      5px auto 20px;
+  }
+
+
+  .icon-center {
+    width: 68px;
+    height: 68px;
+  }
+
+
+  .icon-center svg {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  .asp-main-text h3 {
+    font-size: 1.3rem;
+
+    margin-bottom: 8px;
+  }
+
+
+  .asp-main-text p {
+    font-size: 0.88rem;
+
+    line-height: 1.45;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* -----------------------------------------
+     Metrics
+     ----------------------------------------- */
+
+  .asp-left-metrics {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px 8px;
+
+    margin-top: 18px;
+
+    padding-top: 16px;
+  }
+
+
+  .m-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .m-icon svg {
+    width: 17px;
+    height: 17px;
+  }
+
+
+  .metric-item {
+    gap: 6px;
+  }
+
+
+  .metric-item span {
+    font-size: 0.68rem;
+
+    line-height: 1.2;
+  }
+
+
+  /* -----------------------------------------
+     Top card
+     ----------------------------------------- */
+
+  .top-card .col-md-6 {
+    padding:
+      16px !important;
+  }
+
+
+  .r-icon-box {
+    width: 38px;
+    height: 38px;
+
+    margin-right: 10px;
+  }
+
+
+  .r-icon-box svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .r-text {
+    font-size: 0.8rem;
+
+    line-height: 1.4;
+  }
+
+
+  /* -----------------------------------------
+     Middle card
+     ----------------------------------------- */
+
+  .mid-card {
+    padding:
+      20px 14px;
+  }
+
+
+  .benefits-header {
+    gap: 8px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .benefits-header .text {
+    font-size: 0.9rem;
+  }
+
+
+  .benefits-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 22px 6px;
+  }
+
+
+  .benefit-item {
+    gap: 8px;
+  }
+
+
+  .b-icon-wrap {
+    width: 46px;
+    height: 46px;
+  }
+
+
+  .b-icon-wrap svg {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  .benefit-item span {
+    font-size: 0.72rem;
+
+    line-height: 1.25;
+  }
+
+
+  /* -----------------------------------------
+     Bottom card
+     ----------------------------------------- */
+
+  .bottom-card .d-flex {
+    padding:
+      20px 16px !important;
+
+    gap: 12px !important;
+  }
+
+
+  .bot-icon-wrap {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .bot-icon-wrap svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  .bot-text-wrap h4 {
+    font-size: 0.9rem;
+
+    line-height: 1.3;
+  }
+
+
+  .bot-text-wrap p {
+    font-size: 0.76rem;
+
+    line-height: 1.4;
+  }
+
+
+  .asp-cta-btn {
+    width: 100%;
+
+    justify-content: center;
+
+    padding:
+      10px 16px;
+
+    font-size: 0.85rem;
+  }
+  .asp-right-card{
+    margin-bottom: 12px;
+  }
+}

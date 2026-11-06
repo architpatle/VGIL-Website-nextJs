@@ -1,0 +1,472 @@
+/* ==================================================
+   AIGOCY-STYLE FOOTER  —  Virtual Galaxy Infotech
+================================================== */
+
+/* ---- Root / Wrapper ---- */
+.vg-footer-new {
+  position: relative;
+  background-color: #EDECEC;
+  padding-top: 60px;
+  color: #09090B;
+  overflow: hidden;
+}
+
+/* ---- Watermark ---- */
+.vg-footer-watermark {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98%;
+  max-width: 980px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  opacity: 0.06;
+  filter: grayscale(1);
+}
+
+.vg-footer-watermark img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ---- Content Section ---- */
+.vg-footer-new .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.vg-footer-content {
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+/* ---- Tagline ---- */
+.vg-footer-tagline {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 600;
+  color: #09090B;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+/* ---- Sub text ---- */
+.vg-footer-sub {
+  color: #52525B;
+  font-size: 15px;
+  margin-bottom: 48px;
+}
+
+/* ---- Social Links ---- */
+.vg-footer-social {
+  display: flex;
+  gap: 12px 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.vg-social-link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 32px;
+  border-radius: 20px;
+  background-color: #F4F4F5;
+  box-shadow:
+    0px 7.77px 16px 0px rgba(0, 0, 0, 0.06),
+    0px 3px 3px 0px rgba(0, 0, 0, 0.10),
+    0px -8px 0px 0px rgba(0, 0, 0, 0.05) inset,
+    0px 4px 0px 0px rgba(255, 255, 255, 0.6) inset;
+  text-decoration: none;
+  color: #09090B;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.vg-social-link:hover {
+  color: #E10600;
+  transform: translateY(-3px);
+}
+
+.vg-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(0deg, #272727, #272727),
+    radial-gradient(62.56% 62.56% at 28.14% -10.42%,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0) 100%);
+  box-shadow:
+    0px -3px 0px 0px #080808 inset,
+    0px 1px 0px 0px rgba(255, 255, 255, 0.30) inset,
+    0px 2.77px 2.21px 0px rgba(0, 0, 0, 0.12),
+    0px 3px 3px 0px rgba(0, 0, 0, 0.14);
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.vg-social-link:hover .vg-social-icon {
+  color: #E10600;
+}
+
+/* ---- Bottom Bar ---- */
+.vg-footer-bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 0;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Gradient top border */
+.vg-footer-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+      rgba(212, 212, 216, 0) 0%,
+      #D4D4D8 50%,
+      rgba(212, 212, 216, 0) 100%);
+}
+
+.vg-footer-bottom>* {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---- Footer Nav ---- */
+.vg-footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.vg-footer-nav a {
+  color: #52525B;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.vg-footer-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #E10600;
+  transition: width 0.3s ease;
+}
+
+.vg-footer-nav a:hover {
+  color: #09090B;
+}
+
+.vg-footer-nav a:hover::after {
+  width: 100%;
+}
+
+/* ---- Copyright ---- */
+.vg-footer-copy {
+  color: #52525B;
+  font-size: 13px;
+  text-align: center;
+  margin: 0;
+}
+
+/* ---- Back to Top ---- */
+/* .vg-footer-back-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #52525B;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.25s ease;
+  padding: 0;
+}
+
+.vg-footer-back-top:hover {
+  color: #E10600;
+  transform: translateY(-3px);
+}
+
+.vg-footer-back-top svg {
+  transition: transform 0.3s ease;
+}
+
+.vg-footer-back-top:hover svg {
+  transform: translateY(-4px);
+} */
+
+
+/* ---- Legal Links ---- */
+
+.vg-footer-legal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.vg-footer-legal a {
+  color: #52525B;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.vg-footer-legal a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1.4px;
+  background: #E10600;
+  transition: width 0.3s ease;
+}
+
+.vg-footer-legal a:hover {
+  color: #09090B;
+}
+
+.vg-footer-legal a:hover::after {
+  width: 100%;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 767px) {
+
+  .vg-footer-watermark {
+    opacity: 0.1;
+    width: 83%;
+    /* transform: translateX(-50%) scaleY(2.9); */
+    transform-origin: top center;
+  }
+
+  .vg-footer-content {
+    padding-bottom: 12px;
+  }
+
+  .vg-footer-sub {
+    margin-bottom: 20px;
+  }
+
+  /* Icon-only buttons in a single horizontal row */
+  .vg-footer-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  /* Hide text label — icon only */
+  .vg-social-label {
+    display: none;
+  }
+
+  /* Make each button a compact icon-only circle */
+  .vg-social-link {
+    padding: 0;
+    gap: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    min-width: unset;
+  }
+
+  /* Remove YouTube special centering — all in one row now */
+  .vg-social-link:nth-child(5) {
+    grid-column: unset;
+    justify-self: unset;
+    width: auto;
+    min-width: unset;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .vg-social-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 50%;
+  }
+
+  .vg-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding-top: 10px;
+    padding-bottom: 24px;
+  }
+
+  .vg-footer-bottom>* {
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  .vg-footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .vg-footer-back-top {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .vg-footer-watermark {
+    opacity: 0.1;
+    width: 83%;
+    transform-origin: top center;
+  }
+
+  .vg-footer-content {
+    padding-bottom: 12px;
+  }
+
+  .vg-footer-sub {
+    margin-bottom: 20px;
+  }
+
+  /* Icon-only buttons in a single horizontal row */
+  .vg-footer-social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  .vg-social-label {
+    display: none;
+  }
+
+  .vg-social-link {
+    padding: 0;
+    gap: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    min-width: unset;
+  }
+
+  .vg-social-link:nth-child(5) {
+    grid-column: unset;
+    justify-self: unset;
+    width: auto;
+    min-width: unset;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .vg-social-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    border-radius: 50%;
+  }
+
+  /* ---- Mobile Bottom Bar ---- */
+
+  .vg-footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding-top: 10px;
+    padding-bottom: 24px;
+  }
+
+  .vg-footer-bottom > * {
+    justify-content: center !important;
+    text-align: center;
+  }
+
+  /* Main navigation */
+  .vg-footer-nav {
+    order: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* Legal links */
+  .vg-footer-legal {
+    order: 2;
+    justify-content: center;
+    gap: 12px 18px;
+  }
+
+  /* Copyright MUST stay at the bottom */
+  .vg-footer-copy {
+    order: 3;
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .vg-footer-social {
+    gap: 8px;
+  }
+
+  .vg-social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .vg-footer-tagline {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,88 @@
+/* =========================================
+   MISSION / VISION - DESKTOP
+========================================= */
+
+.mission-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+  height: 100%;
+}
+
+.mission-desktop .mission-box {
+  flex: 1 1 0;
+  min-height: 0;
+}
+
+
+/* =========================================
+   MOBILE CAROUSEL
+========================================= */
+
+.mission-mobile {
+  display: none;
+}
+
+
+/* =========================================
+   MOBILE / TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .mission-right {
+    height: auto;
+  }
+
+  .mission-desktop {
+    display: none;
+  }
+
+  .mission-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .mission-swiper {
+    width: 100%;
+    padding-bottom: 35px !important;
+  }
+
+  .mission-swiper .swiper-slide {
+    height: auto;
+  }
+
+  .mission-swiper .mission-box {
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+
+  /* =========================================
+     PAGINATION
+  ========================================= */
+
+  .mission-swiper .swiper-pagination {
+    bottom: 0;
+  }
+
+  .mission-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+    background: #d4d4d8;
+    transition: all 0.3s ease;
+  }
+
+  .mission-swiper .swiper-pagination-bullet-active {
+    width: 22px;
+    border-radius: 10px;
+    background: #ff4d00;
+  }
+}

@@ -1,0 +1,74 @@
+.dr-benefits-section {
+  /* background: #f8fafc; */
+  position: relative;
+}
+
+.dr-section-subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-top: 10px;
+}
+
+.dr-benefit-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  position: relative;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dr-benefit-card:hover {
+  box-shadow: 0 20px 40px rgba(255, 51, 0, 0.08);
+  border-color: #ffe4e1;
+}
+
+.dr-benefit-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #fff5f2;
+  color: #ff3300;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.dr-benefit-card:hover .dr-benefit-icon-wrapper {
+  background: #ff3300;
+  color: #ffffff;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.dr-benefit-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.dr-benefit-desc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.dr-benefit-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #ff3300;
+  width: 0;
+  transition: width 0.4s ease;
+}
+
+.dr-benefit-card:hover .dr-benefit-progress {
+  width: 100%;
+}

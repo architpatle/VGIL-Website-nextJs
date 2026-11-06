@@ -1,0 +1,76 @@
+.mc-strategies-section {
+  /* background: #ffffff; */
+}
+
+.mc-section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.mc-section-title .text-red {
+  color: #ff3300;
+}
+
+.mc-section-subtitle {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mc-strategy-card {
+  background: #fffafa;
+  border: 1px solid #ffefe8;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.mc-strategy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 51, 0, 0.08);
+  border-color: #ff3300;
+}
+
+.mc-strategy-icon {
+  width: 60px;
+  height: 60px;
+  background: #ffebe6;
+  color: #ff3300;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s;
+}
+
+.mc-strategy-card:hover .mc-strategy-icon {
+  background: #ff3300;
+  color: #ffffff;
+}
+
+.mc-strategy-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.mc-strategy-desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width:768px) {
+  .mc-section-title{
+    font-size: 2.2rem;
+  }
+}

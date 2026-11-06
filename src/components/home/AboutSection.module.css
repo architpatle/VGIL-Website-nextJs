@@ -1,0 +1,40 @@
+.locationMarquee {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.locationTrack {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: max-content;
+
+  /* animation: marqueeScroll 20s linear infinite; */
+}
+
+.locationTrack span {
+  white-space: nowrap;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #e10600;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-33.333%);
+  }
+}

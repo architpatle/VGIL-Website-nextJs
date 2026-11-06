@@ -1,0 +1,416 @@
+/* ====================================================
+   AwardsSection styles
+   Moved out of spacing.css. Only rules dedicated to the awards
+   section live here. Shared rules (.dark-section, .dark-card,
+   @keyframes fadeIn / slideUp, ...) stay in spacing.css.
+   ==================================================== */
+
+.dark-card .award-photo-wrapper {
+  background: transparent !important;
+}
+
+.section-awards .awards-item {
+  display: flex;
+  align-items: center !important;
+  /* Vertically center items */
+  gap: 20px;
+  /* Proper spacing between image and text */
+}
+
+/* Ensure other columns don't overflow when gap is added */
+.section-awards .awards-item>div:not(.award-photo-wrapper) {
+  flex: 1;
+  /* Distribute remaining space evenly */
+  width: auto;
+}
+
+.section-awards .awards-item>div {
+  min-height: unset !important;
+  padding: 4px 0 !important;
+}
+
+.award-photo-wrapper {
+  flex: 0 0 110px !important;
+  /* Prominent thumbnail width */
+  max-width: 110px !important;
+  height: 66px !important;
+  /* Height between 80px-120px */
+  border-radius: 12px;
+  overflow: hidden;
+  /* Clean UI constraint */
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--neutral-900, #18181B);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* Slight shadow */
+}
+
+.award-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Clean crop without distortion */
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.awards-item:hover .award-photo {
+  transform: scale(1.1);
+  /* Smooth zoom-in effect */
+  filter: brightness(1.15);
+  /* Brightness enhancement */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+  .section-awards .awards-item {
+    gap: 16px;
+  }
+
+  .award-photo-wrapper {
+    flex: 0 0 120px !important;
+    max-width: 120px !important;
+    height: 140px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-awards .d-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .section-awards .awards-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 4px 12px !important;
+    height: 100% !important;
+    min-height: 257px !important;
+    /* Force equal height for all cards on mobile */
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    box-sizing: border-box !important;
+  }
+
+  .section-awards .awards-item>div:not(.award-photo-wrapper) {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    /* min-height: unset !important; */
+    padding: 0 !important;
+  }
+
+  .section-awards .awards-item .award-photo-wrapper {
+    flex: 0 0 180px !important;
+    /* width: 70px !important; */
+    max-width: 100% !important;
+    /* height: 70px !important; */
+    margin-bottom: 4px !important;
+  }
+
+  .section-awards .awards-item .title {
+    font-size: 14px !important;
+    line-height: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .section-awards .awards-item .text {
+    font-size: 11px !important;
+    line-height: 15px !important;
+    flex: 1 1 auto !important;
+    margin-bottom: auto !important;
+  }
+
+  .section-awards .awards-item .year {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    margin-top: auto !important;
+  }
+}
+
+/* Specific overrides for Awards items on hover in light mode */
+.dark-section .awards-item {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(225, 6, 0, 0.12) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.dark-section .awards-item:hover {
+  background: #ffffff !important;
+  border-color: rgba(225, 6, 0, 0.35) !important;
+  box-shadow: 0 10px 30px rgba(225, 6, 0, 0.08) !important;
+  transform: translateY(-4px) !important;
+}
+
+@media (max-width:480px) {
+  .section-awards .awards-item .award-photo-wrapper {
+    flex: 0 0 90px !important;
+
+  }
+
+}
+
+/* Award Modal Styling */
+.award-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.75);
+  /* Sleek translucent slate background */
+  backdrop-filter: blur(10px);
+  /* Modern blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: award-fade-in 0.25s ease-out;
+}
+
+.award-modal-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 28px;
+  width: 90%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(225, 6, 0, 0.15), 0 0 1px rgba(225, 6, 0, 0.1);
+  border: 1px solid rgba(225, 6, 0, 0.15);
+  animation: award-slide-up 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.award-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+  color: #1f2937;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-modal-close:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+/* ---- Modal media: fixed size box, image always shown in full ---- */
+.award-modal-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10; /* fixed ratio -> same box for every award */
+  background-color: #f8fafc;
+  overflow: hidden;
+  border-top-left-radius: 27px;
+  border-top-right-radius: 27px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.award-modal-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* whole image visible, never cropped */
+  padding: 12px;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* ---- Carousel (only rendered when an award has 2+ images) ---- */
+.award-carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior-x: contain;
+}
+
+.award-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.award-carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.award-carousel-btn {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  margin-top: -18px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  z-index: 5;
+}
+
+.award-carousel-btn:hover:not(:disabled) {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.award-carousel-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.award-carousel-btn--prev {
+  left: 12px;
+}
+
+.award-carousel-btn--next {
+  right: 12px;
+}
+
+.award-carousel-counter {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: rgba(17, 24, 39, 0.75);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 5;
+}
+
+.award-carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 5;
+}
+
+.award-carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(17, 24, 39, 0.25);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.award-carousel-dot.is-active {
+  background-color: #ef4444;
+  transform: scale(1.3);
+}
+
+.award-carousel-btn:focus-visible,
+.award-carousel-dot:focus-visible,
+.award-modal-close:focus-visible {
+  outline: 2px solid #ef4444;
+  outline-offset: 2px;
+}
+
+.award-modal-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.award-modal-year {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ef4444;
+  /* Brand Red accent */
+  letter-spacing: 0.05em;
+}
+
+.award-modal-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.award-modal-category {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4b5563;
+  line-height: 1.4;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.award-modal-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+  margin: 0;
+  font-weight: 400;
+}
+
+.awards-view-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+/* Award modal animations (own copies so this file has no dependency on shared keyframes) */
+@keyframes award-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes award-slide-up {
+  from {
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .award-carousel-track {
+    scroll-behavior: auto;
+  }
+}

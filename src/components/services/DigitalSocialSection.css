@@ -1,0 +1,607 @@
+/* =========================================================
+   DIGITAL SOCIAL SECTION
+   White + Orange design system
+   ========================================================= */
+
+.ds-social-section {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP DIVIDER
+   ========================================================= */
+
+.ds-social-section::before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 51, 0, 0.15),
+    transparent
+  );
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.ds-social-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.ds-social-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 8px 20px;
+
+  background: rgba(255, 51, 0, 0.08);
+
+  border: 1px solid rgba(255, 51, 0, 0.2);
+
+  border-radius: 50px;
+
+  color: #ff3300;
+
+  font-weight: 600;
+  font-size: 0.85rem;
+
+  margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.ds-social-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+
+  color: #1f2937;
+
+  letter-spacing: -1px;
+
+  margin: 0 0 12px;
+}
+
+.ds-social-title .text-red {
+  color: #ff3300;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.ds-social-subtitle {
+  font-size: 1.05rem;
+
+  color: #6b7280;
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOCIAL PLATFORM GRID
+   ========================================================= */
+
+.ds-social-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+
+  margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   SOCIAL CARD
+   ========================================================= */
+
+.ds-social-card {
+  background: #f8fafc;
+
+  border: 1px solid #f1f5f9;
+
+  border-radius: 12px;
+
+  padding: 36px 28px;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+/* Orange bottom accent */
+
+.ds-social-card::after {
+  content: '';
+
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #ff3300,
+    rgba(255, 51, 0, 0)
+  );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.4s ease;
+}
+
+.ds-social-card:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Card hover */
+
+.ds-social-card:hover {
+  border-color: rgba(255, 51, 0, 0.35);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+   SOCIAL ICON
+   ========================================================= */
+
+.ds-social-card-icon {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  background: #fff5f2;
+
+  color: #ff3300;
+
+  border: 1px solid rgba(255, 51, 0, 0.15);
+
+  transition: all 0.3s ease;
+
+  position: relative;
+}
+
+.ds-social-card:hover .ds-social-card-icon {
+  background: #ff3300;
+
+  color: #ffffff;
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   ICON OUTER RING
+   ========================================================= */
+
+.ds-social-card-icon::before {
+  content: '';
+
+  position: absolute;
+
+  inset: -4px;
+
+  border-radius: 20px;
+
+  border: 2px dashed #ff3300;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+
+  animation: ds-social-spin 10s linear infinite;
+}
+
+.ds-social-card:hover .ds-social-card-icon::before {
+  opacity: 0.2;
+}
+
+@keyframes ds-social-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.ds-social-card-title {
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  color: #1f2937;
+
+  margin: 0 0 10px;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.ds-social-card-desc {
+  font-size: 0.9rem;
+
+  color: #6b7280;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   BOTTOM SHOWCASE
+   ========================================================= */
+
+.ds-social-showcase {
+  background: #ffffff;
+
+  border: 2px solid #ffefe8;
+
+  border-radius: 20px;
+
+  padding: 45px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   SHOWCASE DECORATIVE GLOW
+   ========================================================= */
+
+.ds-social-showcase-glow {
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 51, 0, 0.15) 0%,
+    transparent 70%
+  );
+
+  top: -100px;
+  right: -100px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SHOWCASE CONTENT
+   ========================================================= */
+
+.ds-social-showcase-content {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+
+/* =========================================================
+   SHOWCASE TEXT
+   ========================================================= */
+
+.ds-social-showcase-text {
+  flex: 1;
+}
+
+.ds-social-showcase-text h3 {
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  color: #1f2937;
+
+  margin: 0 0 16px;
+}
+
+.ds-social-showcase-text p {
+  font-size: 1.05rem;
+
+  color: #6b7280;
+
+  line-height: 1.75;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   PLATFORM TAGS
+   ========================================================= */
+
+.ds-social-showcase-platforms {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-top: 24px;
+}
+
+.ds-social-platform-tag {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 8px 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #f1f5f9;
+
+  border-radius: 50px;
+
+  color: #6b7280;
+
+  font-size: 0.85rem;
+
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.ds-social-platform-tag:hover {
+  background: #fff5f2;
+
+  border-color: rgba(255, 51, 0, 0.25);
+
+  color: #ff3300;
+}
+
+
+/* =========================================================
+   SHOWCASE VISUAL
+   ========================================================= */
+
+.ds-social-showcase-visual {
+  width: 280px;
+  height: 280px;
+
+  border-radius: 24px;
+
+  position: relative;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   ORBIT RINGS
+   ========================================================= */
+
+.ds-orbit-ring {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 51, 0, 0.18);
+}
+
+.ds-orbit-1 {
+  width: 200px;
+  height: 200px;
+
+  animation: ds-orbit-spin 15s linear infinite;
+}
+
+.ds-orbit-2 {
+  width: 260px;
+  height: 260px;
+
+  animation: ds-orbit-spin 20s linear infinite reverse;
+}
+
+@keyframes ds-orbit-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   ORBIT DOTS
+   ========================================================= */
+
+.ds-orbit-dot {
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  background: #ff3300;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 15px rgba(255, 51, 0, 0.35);
+}
+
+.ds-orbit-1 .ds-orbit-dot:nth-child(1) {
+  top: -5px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.ds-orbit-1 .ds-orbit-dot:nth-child(2) {
+  bottom: -5px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.ds-orbit-2 .ds-orbit-dot:nth-child(1) {
+  top: 50%;
+  right: -5px;
+
+  transform: translateY(-50%);
+}
+
+.ds-orbit-2 .ds-orbit-dot:nth-child(2) {
+  top: 50%;
+  left: -5px;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   CENTER ICON
+   ========================================================= */
+
+.ds-orbit-center-icon {
+  width: 80px;
+  height: 80px;
+
+  background: #ff3300;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  box-shadow: 0 10px 30px rgba(255, 51, 0, 0.2);
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .ds-social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ds-social-showcase-content {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .ds-social-showcase-platforms {
+    justify-content: center;
+  }
+
+  .ds-social-title {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .ds-social-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ds-social-showcase {
+    padding: 32px;
+  }
+
+  .ds-social-showcase-visual {
+    display: none;
+  }
+
+  .ds-social-title {
+    font-size: 1.8rem;
+  }
+}

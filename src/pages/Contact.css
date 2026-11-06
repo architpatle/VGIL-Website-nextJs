@@ -1,0 +1,438 @@
+/* ================================================================
+   CONTACT PAGE  —  Aigocy Style (Match Screenshot Exactly)
+================================================================ */
+
+
+.contact-hero {
+  padding: 16px 16px 0;
+  /* min-height: fit-content; */
+  position: relative;
+}
+
+/* ---- Section Contact ---- */
+.section-contact {
+  position: relative;
+  padding: 42px;
+}
+
+.section-contact .contact-image {
+  position: absolute;
+  inset: 0 16px;
+  border-radius: 40px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.section-contact .contact-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  /* Lighten background */
+  z-index: 1;
+}
+
+.section-contact .contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.contact-container-custom {
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.section-contact .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Left Column ---- */
+.section-contact .col-left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+/* ---- Heading Section ---- */
+.heading-section .heading-title {
+  font-size: clamp(38px, 4.5vw, 60px);
+  font-weight: 600;
+  color: #09090B;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+/* ---- Contact Badge Pill ---- */
+/* .contact-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #FD3A25; 
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.03);
+  width: fit-content;
+} */
+
+.contact-badge-pill .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FD3A25;
+  display: inline-block;
+}
+
+/* ---- Contact Items ---- */
+.contact-items-wrapper {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.section-contact .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  color: #09090B;
+  background-color: #FFFFFF;
+  box-shadow:
+    0px 10px 20px rgba(0, 0, 0, 0.02),
+    0px 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.contact-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.contact-item-title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #09090B;
+}
+
+.contact-item-text {
+  color: #52525B;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item-text:hover {
+  color: #FD3A25;
+}
+
+/* ---- Form Card ---- */
+.section-contact .form-contact {
+  margin-left: 12px;
+  margin-right: -12px;
+  padding: 28px;
+  border-radius: 40px;
+  background-color: #FFFFFF;
+  /* Pure white as in screenshot */
+  box-shadow:
+    0px 30px 60px rgba(0, 0, 0, 0.04),
+    0px 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.section-contact .form-contact .heading {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #09090B;
+  letter-spacing: -0.5px;
+}
+
+/* ---- Fieldsets and Underline Inputs ---- */
+.form-contact fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-contact label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #09090B;
+  margin-bottom: 6px;
+}
+
+.form-contact input,
+.form-contact textarea {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1.5px solid #E4E4E7;
+  background: transparent;
+  font-size: 15px;
+  color: #09090B;
+  outline: none;
+  border-radius: 0;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus {
+  border-bottom-color: #FD3A25;
+}
+
+.form-contact input::placeholder,
+.form-contact textarea::placeholder {
+  color: #A1A1AA;
+  font-size: 14px;
+}
+
+.form-contact textarea {
+  height: 60px;
+  resize: none;
+}
+
+/* ---- Attachment ---- */
+.form-contact .attachment {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  color: #09090B;
+  transition: color 0.3s ease;
+}
+
+.form-contact .attachment:hover {
+  color: #FD3A25;
+}
+
+.form-contact .attachment-icon {
+  color: #09090B;
+  transform: rotate(45deg);
+}
+
+.form-contact .attachment-text {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ---- Submit Button ---- */
+/* .form-contact .tf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: #222529; 
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+} */
+
+/* .form-contact .tf-btn:hover {
+  background: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.25);
+} */
+
+/* ================================================================
+   RESPONSIVE
+================================================================ */
+
+@media (max-width: 1199px) {
+  .contact-container-custom {
+    max-width: 90%;
+  }
+
+  .section-contact .form-contact {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 36px 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact-container-custom {
+    max-width: 100% !important;
+  }
+
+  .section-contact {
+    padding: 40px 20px;
+  }
+
+  .section-contact .col-left {
+    padding: 12px 0 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-contact {
+    padding: 24px 12px;
+  }
+
+  .section-contact .contact-image {
+    inset: 0;
+    border-radius: 20px;
+  }
+
+  .section-contact .contact-image img {
+    border-radius: 20px;
+  }
+
+  /* Heading left, Contact badge right — side by side on mobile */
+  /* .section-contact .heading-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: left;
+    margin-bottom: 12px;
+  } */
+
+  .section-contact .heading-section .heading-title {
+    order: 1;
+    flex: 1;
+    font-size: clamp(22px, 6vw, 32px);
+    margin-top: 0;
+  }
+
+  /* .section-contact .heading-section .contact-badge-pill {
+    order: 2;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    align-self: flex-start;
+  } */
+
+  /* 2-column grid for email + phone items with 70% reduced gap */
+  .contact-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+    margin-top: 10px;
+  }
+
+  .section-contact .contact-item {
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .contact-item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .contact-item-title {
+    font-size: 11px;
+  }
+
+  .contact-item-text {
+    font-size: 12px;
+  }
+
+  .section-contact .form-contact {
+    padding: 20px 18px !important;
+    border-radius: 20px !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .section-contact .form-contact .heading {
+    font-size: 12px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .form-contact fieldset {
+    margin-bottom: 12px !important;
+  }
+
+  .form-contact input,
+  .form-contact textarea {
+    font-size: 14px !important;
+    padding: 7px 0 !important;
+  }
+
+  .form-contact .attachment {
+    margin-bottom: 15px !important;
+  }
+
+  /* .form-contact .tf-btn {
+    padding: 11px 24px !important;
+    font-size: 14px !important;
+    border-radius: 999px !important;
+  } */
+}
+
+@media (max-width: 480px) {
+  .section-contact {
+    padding: 16px 8px;
+  }
+
+  .contact-items-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 6px;
+  }
+
+  .section-contact .form-contact {
+    padding: 20px 14px !important;
+    border-radius: 16px !important;
+  }
+
+  .contact-item-icon {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+  }
+
+  /* .contact-badge-pill {
+    padding: 6px 14px !important;
+    font-size: 12px !important;
+  } */
+  .heading-section .heading-title {
+    font-size: 28px !important;
+  }
+
+  .box-address{
+    padding: 24px !important;
+    height: auto !important ;
+  }
+}
+
+@media (max-width:786px) {
+  .content-wrap-cp{
+    padding-bottom: 0 !important;
+  }
+  .text-cp{
+    margin-bottom: 0 !important;
+  }
+}

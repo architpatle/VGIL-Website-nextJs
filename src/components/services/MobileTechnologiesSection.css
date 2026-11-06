@@ -1,0 +1,129 @@
+.mc-tech-section {
+  /* background: #f8fafc; */
+  /* border-top: 1px solid #f1f5f9; */
+  /* border-bottom: 1px solid #f1f5f9; */
+  position: relative;
+  overflow: hidden;
+  /* padding: 80px 0; */
+}
+
+.mc-tech-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: #fff0eb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mc-tech-subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ff3300;
+  margin: 0;
+}
+
+.mc-tech-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.mc-tech-desc {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.mc-tech-grid {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+  border: 1px solid #f3f4f6;
+  position: relative;
+}
+
+.mc-tech-grid::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  right: 20px;
+  height: 10px;
+  background: #fff0eb;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  z-index: -1;
+}
+
+.mc-tech-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-bottom: 30px; */
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.mc-tech-header h4 {
+  font-weight: 800;
+  color: #111827;
+  font-size: 1.4rem;
+}
+
+.mc-tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mc-tech-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.mc-tech-item:hover {
+  background: #ffffff;
+  border-color: #ff3300;
+  box-shadow: 0 10px 20px rgba(255, 51, 0, 0.05);
+  transform: translateX(5px);
+}
+
+.mc-tech-item-highlight {
+  background: #fffafa;
+  border-color: #ffe4e1;
+}
+
+.mc-tech-name {
+  font-weight: 700;
+  color: #111827;
+  font-size: 1.1rem;
+}
+
+.mc-tech-detail {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+@media (max-width:768px) {
+  .mc-tech-grid{
+    padding: 28px;
+  }
+  .mc-tech-item{
+    padding: 8px 16px;
+    justify-content: start;
+    flex-direction: column;
+  }
+}

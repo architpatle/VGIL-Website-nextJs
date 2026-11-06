@@ -1,0 +1,336 @@
+/* =========================================================
+   AI / ML SERVICES SECTION
+   Styled to match DRDCServicesProvideSection
+   ========================================================= */
+
+.ai-services-section {
+  /* background-color: #ffffff; */
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.ai-services-wrapper {
+  position: relative;
+  border-radius: 20px;
+  padding: 45px;
+
+  background: #ffffff;
+
+  border: 2px solid #ffefe8;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATIVE SHAPES
+   ========================================================= */
+
+.ai-services-glow {
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 51, 0, 0.15) 0%,
+    transparent 70%
+  );
+
+  border-radius: 50%;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+.ai-services-glow-1 {
+  top: -100px;
+  right: -100px;
+}
+
+.ai-services-glow-2 {
+  bottom: -100px;
+  left: -100px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.ai-services-header {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  margin-bottom: 40px;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.ai-services-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background: rgba(255, 51, 0, 0.1);
+
+  color: #ff5533;
+
+  padding: 10px 28px;
+
+  border-radius: 50px;
+
+  border: 1px solid rgba(255, 51, 0, 0.2);
+
+  font-size: 1.35rem;
+  font-weight: 700;
+
+  margin-bottom: 16px;
+}
+
+.ai-services-badge .badge-icon {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.ai-services-title {
+  color: #1f2937;
+
+  font-size: 2.5rem;
+
+  font-weight: 800;
+
+  margin: 0 0 12px;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.ai-services-subtitle {
+  color: #9ca3af;
+
+  font-size: 1.15rem;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+   ========================================================= */
+
+.ai-services-grid {
+  position: relative;
+  z-index: 1;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+   ========================================================= */
+
+.ai-services-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  background: #f8fafc;
+
+  border: 1px solid #f1f5f9;
+
+  border-radius: 12px;
+
+  padding: 30px 20px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  text-align: center;
+}
+
+
+/*
+  Hover scale, background and border color
+  are handled by Framer Motion in JSX.
+*/
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.ai-services-item-icon {
+  width: 48px;
+  height: 48px;
+
+  background-color: #fff5f2;
+
+  color: #ff3300;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.ai-services-item-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* Icon hover */
+
+.ai-services-item:hover .ai-services-item-icon {
+  background-color: #ff3300;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   SERVICE TEXT
+   ========================================================= */
+
+.ai-services-item-text {
+  color: #1f2937;
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  transition: color 0.3s ease;
+}
+
+.ai-services-item:hover .ai-services-item-text {
+  color: #ff3300;
+}
+
+
+/* =========================================================
+   BOTTOM DESCRIPTION
+   ========================================================= */
+
+.ai-services-pulse {
+  position: relative;
+  z-index: 1;
+
+  text-align: center;
+
+  margin-top: 40px;
+
+  padding: 30px 0 0;
+
+  border-top: 1px solid #f1f5f9;
+}
+
+.ai-services-pulse-text {
+  color: #9ca3af;
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 992px) {
+  .ai-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 576px) {
+  .ai-services-wrapper {
+    padding: 24px;
+  }
+
+  .ai-services-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .ai-services-badge {
+    font-size: 1.15rem;
+
+    padding: 12px;
+  }
+
+  .ai-services-item {
+    padding: 16px;
+
+    border: 1px solid #ff33004d;
+
+    flex-direction: row;
+
+    justify-content: flex-start;
+  }
+
+  .ai-services-item-icon {
+    flex-shrink: 0;
+  }
+
+  .ai-services-item-text {
+    text-align: left;
+  }
+
+  .ai-services-title {
+    font-size: 2rem;
+  }
+}

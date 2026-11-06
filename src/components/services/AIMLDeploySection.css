@@ -1,0 +1,198 @@
+.ai-deploy-section {
+  /* padding: 60px 0; */
+  /* background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%); */
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-deploy-bg-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 51, 0, 0.1), transparent);
+  width: 100%;
+  left: 0;
+}
+
+.ai-deploy-bg-line:nth-child(1) { top: 30%; }
+.ai-deploy-bg-line:nth-child(2) { top: 60%; }
+
+.ai-deploy-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ai-deploy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255, 51, 0, 0.08);
+  border: 1px solid rgba(255, 51, 0, 0.2);
+  border-radius: 50px;
+  color: #ff3300;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.ai-deploy-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.ai-deploy-title .text-red { color: #ff3300; }
+
+.ai-deploy-subtitle {
+  font-size: 1.05rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.ai-deploy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.ai-deploy-card {
+  background: #ffffff;
+  border: 1px solid #f3f4f6;
+  border-radius: 24px;
+  padding: 44px 32px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.ai-deploy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff3300, #ff7733);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.ai-deploy-card:hover::before {
+  transform: scaleX(1);
+}
+
+.ai-deploy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(255, 51, 0, 0.08);
+  border-color: rgba(255, 51, 0, 0.2);
+}
+
+.ai-deploy-card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 51, 0, 0.03) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.ai-deploy-card:hover .ai-deploy-card-glow {
+  opacity: 1;
+}
+
+/* Icon wrapper */
+.ai-deploy-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: rgba(255, 51, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.ai-deploy-icon-wrap::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 24px;
+  border: 2px dashed rgba(255, 51, 0, 0.12);
+  animation: ai-deploy-spin 15s linear infinite;
+}
+
+@keyframes ai-deploy-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ai-deploy-card:hover .ai-deploy-icon-wrap {
+  background: rgba(255, 51, 0, 0.12);
+  transform: scale(1.1);
+}
+
+/* Label */
+.ai-deploy-label {
+  font-size: 0.8rem;
+  color: #ff3300;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.ai-deploy-value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.ai-deploy-desc {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+/* Step connector line */
+.ai-deploy-step-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 51, 0, 0.06);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #ff3300;
+  transition: all 0.3s ease;
+}
+
+.ai-deploy-card:hover .ai-deploy-step-number {
+  background: #ff3300;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .ai-deploy-grid { grid-template-columns: repeat(2, 1fr); }
+  .ai-deploy-title { font-size: 2.2rem; }
+}
+
+@media (max-width: 767px) {
+  /* .ai-deploy-section { padding: 40px 0; } */
+  .ai-deploy-grid { grid-template-columns: 1fr; }
+  .ai-deploy-title { font-size: 1.8rem; }
+}

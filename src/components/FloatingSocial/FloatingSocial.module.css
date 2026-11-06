@@ -1,0 +1,217 @@
+/* ==========================================================
+   WRAPPER
+========================================================== */
+
+.wrapper {
+    position: fixed;
+
+    left: 28px;
+    bottom: 40px;
+
+    width: 38px;
+    height: 38px;
+
+    z-index: 999;
+    pointer-events: none;
+    will-change: transform;
+}
+
+
+/* ==========================================================
+   SHARE BUTTON
+========================================================== */
+
+.toggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    outline: none;
+    border-radius: 99px;
+
+    background: linear-gradient(135deg,
+            rgb(253, 58, 37),
+            #ff784e);
+
+    color: #fff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(253, 58, 37, 0.35);
+
+    transition:
+        box-shadow 0.35s,
+        transform 0.35s;
+
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.toggle:hover {
+    box-shadow:
+        0 10px 26px rgba(253, 58, 37, 0.45);
+}
+
+
+.toggle::before {
+    content: "";
+
+    position: absolute;
+    inset: -5px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(253, 58, 37, 0.20);
+
+    animation: pulseRing 2.5s infinite;
+}
+
+@keyframes pulseRing {
+
+    0% {
+
+        transform: scale(.9);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: scale(1.45);
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ==========================================================
+   SOCIAL ICONS
+========================================================== */
+
+.social {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: rgb(253, 58, 37);
+
+    font-size: 16px;
+
+    border: 1px solid rgba(253, 58, 37, 0.12);
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.12);
+
+    transition:
+        background 0.35s,
+        color 0.35s,
+        box-shadow 0.35s;
+
+    pointer-events: auto;
+}
+
+.social:hover {
+    background: var(--hover);
+    color: #ffffff;
+
+    box-shadow:
+        0 12px 28px rgba(15, 23, 42, 0.18);
+}
+
+/* ==========================================================
+   GLASS EFFECT
+========================================================== */
+
+.social::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(180deg,
+            rgba(255, 255, 255, 0.45),
+            transparent);
+
+    pointer-events: none;
+}
+
+/* ==========================================================
+   ACTIVE SHADOW
+========================================================== */
+
+.social::after {
+    content: "";
+
+    position: absolute;
+    inset: -2px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    opacity: 0;
+
+    transition: 0.35s;
+}
+
+.social:hover::after {
+    opacity: 1;
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .wrapper {
+        left: 20px;
+        bottom: 38px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+    .toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+
+    .social {
+        width: 38px;
+        height: 38px;
+        left: 0;
+        top: 0;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,264 @@
+@media (max-width: 480px) {
+
+    .left-ring,
+    .right-ring {
+        display: none !important;
+    }
+
+    .section-heading-container {
+        margin-bottom: 20px !important;
+    }
+
+    .section-heading-container p {
+        font-size: 16px !important;
+    }
+
+    .section-heading-responsive {
+        font-size: 24px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .red-bracket-container {
+        padding: 6px !important;
+    }
+
+    .overview-card {
+        padding: 16px !important;
+    }
+
+    .overview-motion {
+        scale: 0.5 !important;
+        height: 240px !important;
+        margin-top: -60px !important;
+    }
+
+    .overview-desc {
+        padding: 0 !important;
+    }
+
+    .overview-desc p {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+
+    .overview-desc-line {
+        margin: 16px 0 !important;
+    }
+
+    .text-highlight-pill {
+        margin: 0 !important;
+    }
+
+    .capabilities-heading h2,
+    .designed-for-heading h2 {
+        margin: 0 !important;
+    }
+
+    .capabilities-heading p,
+    .designed-for-heading p {
+        margin-bottom: 12px !important;
+    }
+
+    .capabilities-grid {
+        gap: 12px !important;
+    }
+
+    .capability-card {
+        padding: 12px !important;
+    }
+
+    .capability-icon-container {
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .capability-icon-container svg {
+        height: 18px !important;
+    }
+
+    .capability-card-title {
+        font-size: 16px !important;
+    }
+
+    .designed-grid {
+        gap: 12px !important;
+    }
+
+    .designed-card {
+        padding: 12px !important;
+        flex-direction: row !important;
+        gap: 12px !important;
+        /* justify-content: space-between; */
+    }
+
+    .designed-icon-container {
+        flex: 0 0 40px !important;
+        height: 40px !important;
+        width: 40px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .designed-icon-container svg {
+        height: 18px !important;
+        width: 18px !important;
+    }
+
+    .designed-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* max-width: 80%; */
+    }
+
+    .designed-card-title {
+        font-size: 18px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .designed-card-desc {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 2px !important;
+    }
+
+    .designed-card-divider {
+        display: none !important;
+    }
+
+    .feature-section-card {
+        padding: 16px !important;
+    }
+
+    .feature-header-row {
+        margin-bottom: 12px !important;
+    }
+
+    .feature-card-main-title {
+        font-size: 18px !important;
+    }
+
+    .feature-card-subtitle {
+        font-size: 16px !important;
+    }
+
+    .feature-bullets-list {
+        gap: 12px !important;
+    }
+
+    .feature-bullet-item {
+        font-size: 16px !important;
+    }
+
+    .why-choose-grid {
+        gap: 12px !important
+    }
+
+    .why-choose-card {
+        padding: 16px !important;
+        flex-direction: row !important;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .why-choose-icon-container {
+        flex: 0 0 40px !important;
+        width: 40px !important;
+        height: 40px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .why-choose-icon-container svg {
+        height: 18px !important;
+    }
+
+    .why-choose-card-number {
+        display: none !important;
+    }
+
+    .why-choose-card-title {
+        font-size: 18px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .why-choose-card-desc {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+
+    .why-choose-cta-card {
+        padding: 16px !important;
+        flex-direction: row !important;
+        justify-content: start !important;
+        align-items: center !important;
+        gap: 12px !important
+    }
+
+    .why-choose-cta-icon {
+        margin-bottom: 0 !important;
+        height: 28px !important;
+    }
+
+    .why-choose-cta-title {
+        font-size: 18px !important;
+    }
+
+    .why-choose-cta-btn {
+        font-size: 14px !important;
+        padding: 8px 16px !important;
+    }
+
+    .outcome-main-card {
+        padding: 16px !important;
+    }
+
+    .outcome-text {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .outcome-cta-btn {
+        font-size: 16px !important;
+    }
+
+    .outcome-btn-arrow {
+        flex: 0 0 20px !important;
+        height: 20px !important;
+        width: 20px !important;
+
+    }
+
+    .outcome-corner-bracket-tl {
+        top: 4px !important;
+        left: 4px !important;
+    }
+
+    .outcome-corner-bracket-br {
+        bottom: 4px !important;
+        right: 4px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-heading-container {
+        margin-bottom: 20px !important;
+    }
+
+    .section-heading-container p {
+        font-size: 16px !important;
+    }
+
+    .section-heading-responsive {
+        font-size: 24px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .overview-card {
+        padding: 16px !important;
+    }
+
+    .capability-card-desc {
+        display: none !important;
+    }
+}

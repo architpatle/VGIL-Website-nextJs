@@ -1,0 +1,24 @@
+@media (max-width:480px) {
+
+    .benefits-grid {
+        gap: 12px !important
+    }
+
+    .benefit-card {
+        padding: 16px !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 12px !important
+    }
+
+    .benefit-icon-box {
+        margin-bottom: 0 !important;
+        flex: 0 0 40px !important;
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .benefit-title {
+        font-size: 16px !important;
+    }
+}
