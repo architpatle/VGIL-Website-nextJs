@@ -12,7 +12,7 @@ function BlogSingle() {
   const params = useParams();
   const router = useRouter();
 
-  const blogSlug = params.blogSlug;
+  const blogSlug = params?.blogSlug;
 
   // Find the blog item from RESOURCE_DATA
   const blogResource = RESOURCE_DATA.find(r => r.slug === 'blog');
