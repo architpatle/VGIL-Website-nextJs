@@ -1,5 +1,5 @@
 
-import BlogSingle from "@/pages/BlogSingle";
+import BlogSingle from "@/components/blog/BlogSingle";
 
 export default function BlogSlugPage() {
     return <BlogSingle />;

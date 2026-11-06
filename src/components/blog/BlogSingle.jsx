@@ -5,9 +5,9 @@ import { useParams } from 'next/navigation';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
-import PageTitle from '../components/common/PageTitle';
-import BlogSidebar from '../components/blog/BlogSidebar';
-import { RESOURCE_DATA } from '../data/resourceData';
+import PageTitle from '../common/PageTitle';
+import BlogSidebar from './BlogSidebar';
+import { RESOURCE_DATA } from '../../data/resourceData';
 
 function BlogSingle() {
   const params = useParams();
