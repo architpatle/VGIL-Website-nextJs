@@ -11,7 +11,7 @@ function NotFound() {
           We suggest that you return to homepage.
         </p>
         <div className="effectFade fadeZoom">
-          <Link to="/" className="tf-btn">
+          <Link href="/" className="tf-btn">
             <span className="text-body-2 fw-semibold">HOME PAGE</span>
           </Link>
         </div>
