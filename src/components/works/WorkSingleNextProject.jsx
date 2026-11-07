@@ -14,7 +14,7 @@ function WorkSingleNextProject() {
             <div className="featured-works-item">
               <div className="image main-mouse-hover">
                 <img src="/assets/images/section/featured-works-3.jpg" alt="" />
-                <Link to="/work-single" className="tf-mouse view-project h6">
+                <Link href="/work-single" className="tf-mouse view-project h6">
                   View Project
                   <i className="icon icon-arrow-top-right"></i>
                 </Link>

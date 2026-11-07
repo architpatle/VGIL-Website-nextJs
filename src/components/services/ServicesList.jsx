@@ -29,7 +29,7 @@ function ServicesList() {
                   {service.description}
                 </p>
                 <div className="card-footer mt-auto pt-24" style={{ borderTop: '1px solid #eee' }}>
-                  <Link to={`/services/${service.slug}`} className="d-flex align-items-center justify-content-between fw-bold" style={{ color: '#ff4d00' }}>
+                  <Link href={`/services/${service.slug}`} className="d-flex align-items-center justify-content-between fw-bold" style={{ color: '#ff4d00' }}>
                     Learn More
                     <i className="icon icon-arrow-right-solid"></i>
                   </Link>

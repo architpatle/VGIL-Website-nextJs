@@ -25,7 +25,7 @@ function AboutSection() {
                 </div>
                 {/* <h5 className="title fw-semibold text-white">Global Software <span className="text-brand">Solution since 1997</span></h5> */}
                 <h5 className="title  text-white">Global Software <b className='fw-bold'>Solution since 1997</b></h5>
-                {/* <Link to="/contact" className="tf-btn tf-btn-short">
+                {/* <Link href="/contact" className="tf-btn tf-btn-short">
                   Start a Project
                 </Link> */}
               </div>

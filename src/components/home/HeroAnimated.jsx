@@ -56,7 +56,7 @@ function HeroAnimated() {
             From discovery to deployment, we plug into your stack to prototype, <br /> validate, and launch AI experiences your users actually love.
           </p>
           <div className="bot-btns effectFade fadeRotateX">
-            <Link to="/services" className="tf-btn">
+            <Link href="/services" className="tf-btn">
               Explore Services
             </Link>
             <a href="#pricing" className="tf-btn-2">

@@ -30,7 +30,7 @@ function BlogSidebar() {
               </div>
               <div className="content">
                 <h6 className="title text-body-1">
-                  <Link to={post.link} className="link1">{post.title}</Link>
+                  <Link href={post.link} className="link1">{post.title}</Link>
                 </h6>
                 <p className="time text-body-3 text-white-64">August 23, 2024</p>
               </div>
@@ -43,15 +43,15 @@ function BlogSidebar() {
         <h5 className="sidebar-title">Category</h5>
         <div className="sidebar-categories">
           <div className="item">
-            <Link to="#" className="text-body-1 link1">Enterprise Solutions</Link>
+            <Link href="#" className="text-body-1 link1">Enterprise Solutions</Link>
             <span className="text-body-3 text-white-64">(2)</span>
           </div>
           <div className="item">
-            <Link to="#" className="text-body-1 link1">Banking Tech</Link>
+            <Link href="#" className="text-body-1 link1">Banking Tech</Link>
             <span className="text-body-3 text-white-64">(3)</span>
           </div>
           <div className="item">
-            <Link to="#" className="text-body-1 link1">Cybersecurity</Link>
+            <Link href="#" className="text-body-1 link1">Cybersecurity</Link>
             <span className="text-body-3 text-white-64">(1)</span>
           </div>
         </div>
@@ -60,10 +60,10 @@ function BlogSidebar() {
       <div className="sidebar-item effectFade fadeUp no-div">
         <h5 className="sidebar-title">Popular tag</h5>
         <div className="list-tags">
-          <Link to="#" className="tags-item fw-semibold">ERP</Link>
-          <Link to="#" className="tags-item fw-semibold">Cloud</Link>
-          <Link to="#" className="tags-item fw-semibold">AI</Link>
-          <Link to="#" className="tags-item fw-semibold">Banking</Link>
+          <Link href="#" className="tags-item fw-semibold">ERP</Link>
+          <Link href="#" className="tags-item fw-semibold">Cloud</Link>
+          <Link href="#" className="tags-item fw-semibold">AI</Link>
+          <Link href="#" className="tags-item fw-semibold">Banking</Link>
         </div>
       </div>
     </div>

@@ -170,7 +170,7 @@ function WorksSection({ className = "section-featured-works section-spacing-lg" 
                                 filter: 'drop-shadow(0 10px 15px rgba(0,0,0,0.05))',
                                 zIndex: 2
                               }} />
-                              {/* <Link to={`/products/${product.slug}`} className="tf-mouse view-project h6" style={{ zIndex: 2 }}>
+                              {/* <Link href={`/products/${product.slug}`} className="tf-mouse view-project h6" style={{ zIndex: 2 }}>
                                 View Product
                                 <i className="icon icon-arrow-top-right"></i>
                               </Link> */}

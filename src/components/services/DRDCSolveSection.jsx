@@ -50,7 +50,7 @@ const DRDCSolveSection = () => {
                   Our solutions offer high optimization, lowest latency, scalability on demand, and complete data centre management with lower cost of ownership.
                 </p>
               </div>
-              {/* <Link to='/services/dc-dr/#services'> */}
+              {/* <Link href='/services/dc-dr/#services'> */}
                 <a href='#servicesDRDC' className="btn-outline-dr mt-4">
                   Explore Services <ArrowRight size={18} className="ms-2" />
                 </a>

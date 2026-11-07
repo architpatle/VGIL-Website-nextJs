@@ -30,7 +30,7 @@ function PricingSection() {
                   <div className="price-number fw-bold" data-month="1000" data-year="9900">$9,900</div>
                   <h6 className="price-per">/ year</h6>
                 </div>
-                <Link to="/contact" className="tf-btn">
+                <Link href="/contact" className="tf-btn">
                   Get Started
                 </Link>
               </div> */}
@@ -85,7 +85,7 @@ function PricingSection() {
                   <div className="price-number fw-bold" data-month="1700" data-year="19900">$19,900</div>
                   <h6 className="price-per">/ year</h6>
                 </div>
-                <Link to="/contact" className="tf-btn">
+                <Link href="/contact" className="tf-btn">
                   Get Started
                 </Link>
               </div> */}

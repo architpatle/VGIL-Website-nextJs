@@ -49,7 +49,7 @@ function CareersHero() {
                   Apply for Job
                   <i className="icon icon-long-arrow-alt-right-solid ms-10"></i>
                 </a>
-                <Link to="/contact" className="tf-btn secondary" style={{ 
+                <Link href="/contact" className="tf-btn secondary" style={{ 
                   padding: '15px 35px', 
                   borderRadius: '100px',
                   backgroundColor: 'transparent',

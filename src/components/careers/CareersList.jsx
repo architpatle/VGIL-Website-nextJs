@@ -59,7 +59,7 @@ function CareersList() {
                   </div>
                 </div>
                 <div className="job-action">
-                  <Link to={`/careers/${job.slug}`} className="d-flex align-items-center gap-8 fw-bold" style={{ color: '#ff2d15', textDecoration: 'none' }}>
+                  <Link href={`/careers/${job.slug}`} className="d-flex align-items-center gap-8 fw-bold" style={{ color: '#ff2d15', textDecoration: 'none' }}>
                     <span>Apply</span>
                     <i className="icon icon-arrow-top-right"></i>
                   </Link>

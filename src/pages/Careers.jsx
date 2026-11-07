@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Footer from '../components/Footer';
 import careersBg from '../assets/careers-bg-img/Careers@2x.png';
 
 // Import VGIL Group Images
@@ -202,7 +201,6 @@ const Careers = () => {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 };
