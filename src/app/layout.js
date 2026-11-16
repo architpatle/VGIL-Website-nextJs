@@ -7,7 +7,7 @@ import "../services-premium.css";
 import GlobalLayout from "@/components/GlobalLayout";
 
 export const metadata = {
-  title: "VGIL",
+  title: "VGIL: IT Company & Services | Digital Solution | Technology Consulting",
   description: "Virtual Galaxy Infotech",
 };
 
